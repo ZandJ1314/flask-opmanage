@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link href="../static/css/demo_table_jui.css" rel="stylesheet">
+<link href="../static/css/jquery-ui-1.8.16.custom.css" rel="stylesheet">
+<link href="../static/js/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/js/select2/select2.css">
+<link rel="stylesheet" href="../static/js/datepicker/css/datepicker.css">
+</head>
+<body>
+	<div style="margin-top:20px;margin-left: auto;margin-right: auto;width:98%">
+	<div id = "select"><select id='s1' name='functionGroup' style="width:90px" >
+					<option value="groups">分组</option>
+					<option value="gameservers">游戏服</option>
+					<option value="otherservers">其它服</option>
+					</select>
+					<select id='s2' name='chanGroup'  style="width:90px" >
+					<option value="all">所有</option>
+					<option value="guanwang">官网</option>
+					<option value="lianyun">联运</option>
+					</select>
+					<select id='selectLocalIp' name='selectLocalIp' style="width:150px" >
+					<option value="lip">内网IP</option>
+					{% for localIp in AllInfo['localIp'] %}
+						<option value={{ localIp }}>{{ localIp }}</option>
+					{% endfor %}
+					</select>
+					<select id='selectServerIp' name='selectServerIp'  style="width:150px" >
+					<option value="dip">电信IP</option>
+					{% for serverIp in AllInfo['serverIp'] %}
+						<option value={{ serverIp }}>{{ serverIp }}</option>
+					{% endfor %}
+					</select>
+					<select id='selectUnionIp' name='selectUnionIp'  style="width:150px" >
+					<option value="uip">联通IP</option>
+					{% for unionIp in AllInfo['unionIp'] %}
+						<option value={{ unionIp }}>{{ unionIp }}</option>
+					{% endfor %}
+					</select></div>
+	
+	<table id="meterDataExp" width="100%" class="display">
+		<thead>
+		
+			<tr>
+				<th width="1%">ID</th>
+				<th width="3%">内网IP</th>
+				<th width="3%">电信IP</th>
+				<th width="3%">联通IP</th>
+				<th width="2%">CPU</th>
+				<th width="2%">内存</th>
+				<th width="2%">硬盘</th>
+				<th width="2%">机房</th>
+				<th width="1%">负载</th>
+				<th width="2%">总开服</th>
+				<th width="10%">描述</th>
+				<th width="5%">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<div class="modal hide fade" id="myModal"></div>
+	</div>
+</body>
+<script src="../static/js/jquery-1.8.3.min.js"></script>
+<script src="../static/js/jquery.dataTables.min.js"></script>
+<script src="../static/js/bootstrap/js/bootstrap.js"></script>
+<script src="../static/js/select2/select2.min.js"></script>
+<script src="../static/js/my-common.js"></script>
+<script src="../static/js/datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../static/js/datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() { 
+		$("#s1").select2().on("change",function(){
+		oTable.fnDraw();
+		}); 
+		$("#s2").select2().on("change",function(){
+		oTable.fnDraw();
+		}); 
+		$("#selectLocalIp").select2().on("change",function(){
+		oTable.fnDraw();
+		});
+		$("#selectServerIp").select2().on("change",function(){
+		oTable.fnDraw();
+		}); 
+		$("#selectUnionIp").select2().on("change",function(){
+		oTable.fnDraw();
+		}); 
+	});
+	oTable = $('#meterDataExp').dataTable({
+		"aLengthMenu": [[20, 50, 100, 200], [20, 50, 100, 200]],
+		"bProcessing" : true,
+		"bJQueryUI" : true,
+		"bSort" : false,
+		"bFilter" : false,
+		"sPaginationType" : "full_numbers",
+		"sAjaxSource" : "listPhyServer",
+		"bServerSide" : true,
+		"sDom" : '<"H"lr>t<"F"ip>',
+		"fnServerData" : retrieveData,
+		"fnRowCallback" : rowCallback,
+		"aoColumns" : [ {
+			"mDataProp" : "id",
+			"sClass" : "center",
+			"bVisible" : false
+		}, {
+			"mDataProp" : "localIp",
+			"sClass" : "center"
+		},{
+			"mDataProp" : "serverIp",
+			"sClass" : "center"
+		},{
+			"mDataProp" : "unionIp",
+			"sClass" : "center"
+		},{
+			"mDataProp" : "cpu",
+			"sClass" : "center"
+		},{
+			"mDataProp" : "mem",
+			"sClass" : "center"
+		},{
+			"mDataProp" : "hd",
+			"sClass" : "center"
+		},{
+			"mDataProp" : "serverRoom",
+			"sClass" : "center"
+		}, {
+			"mDataProp" : "load",
+			"sClass" : "center"
+		},{
+			"mDataProp" : "total",
+			"sClass" : "center"
+		},{
+			"mDataProp" : "description",
+			"sClass" : "center"
+		},{
+			"mData" : null,
+			"sClass" : "center"
+		}],
+		"oLanguage" : {
+			"oPaginate" : {
+				"sFirst" : "首页",
+				"sLast" : "末页",
+				"sNext" : "下一页",
+				"sPrevious" : "上一页",
+			},
+			"sInfo" : "显示_START_到_END_条，共_TOTAL_条",
+			"sEmptyTable" : "没有数据",
+			"sInfoEmpty" : "没有数据",
+			"sLengthMenu" : "每页显示 _MENU_ 条",
+			"sLoadingRecords" : "正在加载...",
+			"sProcessing" : "正在加载...",
+			"sSearch" : "搜索"
+		}
+	});
+	$('.dataTables_length').css("float", "right");
+	$('.dataTables_length').parent().append("<div style='float:left;margin-right:10px'><a data-backdrop='static' class='btn btn-primary' id='newServer'><i class='icon-hdd icon-white'></i>新增服务器</a></div>");
+	$('.dataTables_length').parent().append($("#select").html());
+	$("#select").html(""); 
+	function rowCallback(nRow, aData, iDisplayIndex) {
+		$('td:eq(10)', nRow).html("<button value="+aData.id+" class='btn btn-info'><i class='icon-edit icon-white'></i>编辑</i></button><button value="+aData.id+" class='btn btn-danger'><i class='icon-trash icon-white'></i>删除</i></button>");
+	}
+	function retrieveData(sSource, aoData, fnCallback) {
+		var pageSize = fnGetKey(aoData, "iDisplayLength");
+		var startRow = fnGetKey(aoData, "iDisplayStart");
+		var val = $("#s1").val();
+		var val2 = $("#s2").val();
+		var selectLocalIp = $("#selectLocalIp").val();
+		var selectServerIp = $("#selectServerIp").val();
+		var selectUnionIp = $("#selectUnionIp").val();
+		
+		$.ajax({
+			"type" : "POST",
+			"url" : sSource,
+			"dataType" : "json",
+			"data" : {
+				pageSize : pageSize,
+				startRow : startRow,
+				functionGroup : val, 
+				chanGroup : val2,
+				localIp : selectLocalIp,
+				serverIp : selectServerIp,
+				unionIp : selectUnionIp
+			},
+			"success" : function(resp) {
+				fnCallback($.parseJSON(resp.result));
+			}
+		});
+	}
+	
+	function fnGetKey(aoData, sKey) {
+		for ( var i = 0, iLen = aoData.length; i < iLen; i++) {
+			if (aoData[i].name == sKey) {
+				return aoData[i].value;
+			}
+		}
+		return null;
+	}
+	$("#newServer").click(function() {
+		$.get("addServer", function(data) {
+			$("#myModal").html(data);
+			$('#myModal').modal({
+				backdrop : 'static'
+			});
+		});
+	});
+	$(".btn-info").die().live("click", function() {
+		var id = $(this).val();
+		$.get("editServer?serverId=" + id, function(data) {
+			$("#myModal").html(data);
+			$('#myModal').modal({
+				backdrop : 'static'
+			});
+		});
+	});
+	$(".btn-danger").die().live("click", function() {
+		var id = $(this).val();
+		function callback() {
+			$.get("deleteServer?serverId=" + id, function(data) {
+				if (data.result == "true") {
+					oTable.fnPageChange('first');
+				} else {
+					alert("失败！");
+				}
+			});
+		}
+		bootstrapConfirm("确定删除吗？", callback);
+	});
+</script>
+</html>

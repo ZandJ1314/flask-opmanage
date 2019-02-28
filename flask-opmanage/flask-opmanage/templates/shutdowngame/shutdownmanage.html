@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../static/js/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../static/js/layout/layout-default-latest.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="../static/js/select2/select2.css">
+<link rel="stylesheet" href="../static/js/datepicker/css/datepicker.css">
+<link rel="stylesheet" href="../static/js/chart/morris.css">
+<script src="../static/js/jquery-1.8.3.min.js"></script>
+<script src="../static/js/jquery.dataTables.min.js"></script>
+<script src="../static/js/bootstrap/js/bootstrap.js"></script>
+<script src="../static/js/layout/jquery-ui-latest.js"></script>
+<script src="../static/js/layout/jquery.layout-latest.js"></script>
+<script src="../static/js/my-common.js"></script>
+<script src="../static/js/select2/select2.min.js"></script>
+<script src="../static/js/datepicker/js/bootstrap-datepicker.js"></script>
+<script
+	src="../static/js/datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script src="../static/js/chart/raphael-min.js"></script>
+<script src="../static/js/chart/morris.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="ui-layout-west">
+		{% include "shutdowngame/operServerList.html" %}
+	</div>
+	<div class="ui-layout-center">
+		<div class="tabs-custom">
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#player">倒计时关服</a></li>
+			</ul>
+			<div class="tab-content">
+				<div id="shutdown" class="tab-pane fade active in">
+					<div class="well">
+						<form id="shutdownForm" enctype="multipart/form-data" class="form-horizontal">
+							<div class="control-group ">
+								<label class="control-label">倒计时关服时间（单位：分钟）</label>
+								<div class="controls">
+									<input type="text" name="time" value="" id="shutdownForm_time"/>
+								</div>
+							</div>
+
+						</form>
+						<button id="btn_submit" style="margin-left: 180px;" class="btn btn-primary">提交</button>
+					</div>
+					<div id="table" style="width: 750px"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="modal hide fade" id="checkModel">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">×</a>
+			<h3>自定义勾选</h3>
+		</div>
+		<div class="modal-body">
+			<textarea id="checkInfo"></textarea>
+		</div>
+		<div class="modal-footer">
+			<a href="javascript:void(0);" id="customCheckSubmit"
+				class="btn btn-primary">确定</a> <a href="javascript:void(0);"
+				class="btn" data-dismiss="modal">关闭</a>
+		</div>
+	</div>
+</body>
+<script>
+	$('.input-daterange').datepicker({
+		language : "zh-CN",
+		autoclose : true,
+		todayBtn : "linked"
+	});
+	$('.input-daterange input').datepicker("setDate", new Date);
+	$(document).ready(function() {
+		$('body').layout({
+			west__size : 300
+		});
+		$(document).ready(function() {
+			$("#s1").select2();
+		});
+		$(document).ready(function() {
+			$("#s2").select2();
+		});
+	});
+
+	$("#btn_submit")
+			.click(
+					function() {
+						var ShutdownTime = document.getElementById('shutdownForm_time').value;
+						if (ShutdownTime == "" || ShutdownTime == null){
+							bootstrapAlert("请填写关服倒计时分钟");
+							return;
+						}
+						var servers = selectedServers();
+						if (servers.length == 0) {
+							bootstrapAlert("请选择区服");
+						} else {
+							var serParm = "";
+							for ( var i = 0; i < servers.length; i++) {
+								if (servers[i].platformAlias == null
+										|| servers[i].serverId == null
+										|| servers[i].serverId == "") {
+									bootstrapAlert("请选择区服");
+									return;
+								}
+								if(i == servers.length -1){
+									serParm += '{"zone":"'+servers[i].serverId+'","agent":"'+servers[i].platformAlias+'"}';
+								}else{
+									serParm += '{"zone":"'+servers[i].serverId+'","agent":"'+servers[i].platformAlias+'"},';
+								}
+							}
+							serParm = "&serverinfo=["+serParm+"]";
+							$.post(
+											"shutdownByServers",
+											$("#shutdownForm").serialize()
+													+ serParm,
+											function(data) {
+												if (data.result) {
+													var title = [
+															"区服",
+															"结果" ];
+													var colnum = [
+															"servername",
+															"result" ];
+													var table = createTable(
+															data.resultsList,
+															title, colnum);
+													$("#table").html(table);
+												} else {
+													var errors = {
+														fieldErrors : data.fieldErrors,
+														errors : data.actionErrors
+													};
+													try {
+														bootstrapValidation(
+																$("#shutdownForm"),
+																errors);
+													} catch (e) {
+														bootstrapAlert("错误");
+													}
+												}
+											});
+						}
+					});
+</script>
+</html>

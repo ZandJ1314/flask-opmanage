@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" charset= "UTF-8">
+	$(document).ready(function() { $("#mysqlsrc_sn").select2(); });
+	var MysqlTreesetting = {
+		check:{
+			enable:true,
+		},
+		data:{
+			simpleData:{
+				enable:true
+			}
+		}
+	};
+	
+	var MysqlTreeNodes = {{ AllInfo['MysqlTreeNodes'] | safe }};
+	$(document).ready(function(){
+		$.fn.zTree.init($("#MysqlTree"),MysqlTreesetting,MysqlTreeNodes);
+	})
+	
+	$("#mysqlsrc_check1").die().live("click", function() {
+		var tablesInText = $('#mysqlsrc_text').val();
+		var dbInselect = $('#mysqlsrc_sn').val();
+		if(dbInselect != ""){
+			var checkSelectZtree = $.fn.zTree.getZTreeObj("MysqlTree");
+			checkSelectZtree.checkAllNodes(false);
+			var parentNode = checkSelectZtree.getNodeByParam("name", dbInselect, null);
+			var TableSplit = new Array();
+			TableSplit = tablesInText.split(",");
+			for(var u=0;u<TableSplit.length;u++){
+				var node = checkSelectZtree.getNodeByParam("name", TableSplit[u], parentNode);
+				if(node != null){
+					checkSelectZtree.checkNode(node,true,true,false);
+				}
+			}
+		}
+	
+	});
+	
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">×</a>
+		<h3>选择要更新的表</h3>
+	</div>
+	<div class="modal-body">
+		<div class="row-fluid">
+
+			<select id="mysqlsrc_sn" style="width:150px">
+			{% for db in AllInfo['DBsList'] %}
+			<option value={{ db }}>{{ db }}</option>
+			{% endfor %}
+			</select>
+			<input class="input-medium" type="text" id="mysqlsrc_text" style="margin-top:10px" />
+			<button id="mysqlsrc_check1" class="btn">勾选</button>
+
+			<div class="span8">
+				<div class="well" style="margin-left:-10px">
+					<ul id="MysqlTree" class="ztree"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="javascript:void(0);" id="selectTableSave" class="btn btn-primary">确定</a>
+		<a href="javascript:void(0);" class="btn" data-dismiss="modal">关闭</a>
+	</div>
+</body>
+</html>

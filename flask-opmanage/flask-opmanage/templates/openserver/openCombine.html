@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../static/js/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/js/layout/layout-default-latest.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../static/js/select2/select2.css">
+    <link rel="stylesheet" href="../static/js/datepicker2/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../static/js/chart/morris.css">
+    <script src="../static/js/jquery-1.8.3.min.js"></script>
+    <script src="../static/js/jquery.dataTables.min.js"></script>
+    <script src="../static/js/bootstrap/js/bootstrap.js"></script>
+    <script src="../static/js/layout/jquery-ui-latest.js"></script>
+    <script src="../static/js/layout/jquery.layout-latest.js"></script>
+    <script src="../static/js/my-common.js"></script>
+    <script src="../static/js/select2/select2.min.js"></script>
+    <script src="../static/js/datepicker2/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../static/js/datepicker2/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="../static/js/chart/raphael-min.js"></script>
+    <script src="../static/js/chart/morris.min.js"></script>
+    <title>Insert title here</title>
+</head>
+<body>
+<div id="content" style="margin-top:20px;margin-left:100px;margin-right:100px">
+    <form action="" id="openForm">
+        <div class="unit">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="navbar-form pull-left">
+                        <div class="input-prepend">
+                            <span class="add-on">平台:</span>
+                            <select name="platform" style="width:auto;margin-top:0px" id="platform">
+                                {% for platname in AllInfo['plats'] %}
+                                <option value={{ platname[
+                                'platformId'] }}>{{ platname['platformAlias'] }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="input-prepend" style="margin-left:15px">
+                            <span class="add-on">区服:</span>
+                            <input name="server" class="span2" id="prependedInput" type="text" placeholder="区服ID">
+                        </div>
+
+                        <div class="input-prepend" style="margin-left:15px">
+                            <span class="add-on">IP:</span>
+                        </div>
+                        <select name="ip" id="s0" class="ip" style="margin-top:-5px">
+                            {% for serverip in AllInfo['ips'] %}
+                            <option value={{ serverip }}>{{ serverip }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <div class="input-prepend" style="margin-left:15px">
+                            <span class="add-on">开服时间:</span>
+                            <input type="text" name="openTime" readonly="readonly" class="span2 date" value="2079-12-08 01:00:00"/>
+                        </div>
+
+                        <div class="input-prepend" style="margin-left:15px">
+                            <span class="add-on">开服进程:</span>
+                            <input name="totalNum" class="span2" id="prependedInput" type="text">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="butt" style="text-align:center">
+    <button id="add" class="btn">添加</button>
+    <button id="sub" class="btn btn-primary">提交</button>
+</div>
+<div class="row-fluid">
+    <div id="fail" class="span4">
+    </div>
+    <div id="success" class="span4">
+    </div>
+    <div id="unknow" class="span4">
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        dateInit();
+    });
+    var id = 0;
+    function dateInit() {
+
+        $('.date').datetimepicker({
+            format: 'yyyy-mm-dd hh:00:00',
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 1,
+            maxView: 2,
+            forceParse: 0
+        });
+        var ip = $(".ip").length;
+        $($(".ip")[ip - 1]).attr("id", "s" + id);
+        $($(".ip")[ip - 2]).remove();
+        $("#s" + id).select2();
+        id++;
+    }
+
+    $("#add").click(function () {
+        $("#openForm").append($(".unit").html());
+        $($(".navbar-inner")[($(".navbar-inner").length - 1)]).append("<button style='padding-top:10px' type='button' class='close' data-dismiss='alert'>&times;</button>");
+        dateInit();
+    });
+
+    $("#sub").click(function () {
+        var parm = "?";
+        var platforms = $("select[name=platform]");
+        var servers = $("input[name=server]");
+        var ips = $("select[name=ip]");
+        var openTimes = $("input[name=openTime]");
+        var totalNums = $("input[name=totalNum]");
+
+        if (platforms.length == servers.length && servers.length == ips.length && ips.length == openTimes.length && openTimes.length == totalNums.length) {
+            var pass = true;
+            var msg = "";
+            var allserver = "";
+            for (var i = 0; i < platforms.length; i++) {
+                var platform = $(platforms[i]).val();
+                var serverId = $(servers[i]).val();
+                var serverIp = $(ips[i]).val()
+                var openTime = $(openTimes[i]).val();
+                var totalNum = $(totalNums[i]).val();
+                if (serverId == "" || isNaN(serverId)) {
+                    pass = false;
+                    msg = "区服ID错误！";
+                    break;
+                }
+                if (openTime == "") {
+                    pass = false;
+                    msg = "开服时间错误！";
+                    break;
+                }
+                if (totalNum == "" || isNaN(totalNum)) {
+                    pass = false;
+                    msg = "总开服数错误！";
+                    break;
+                }
+                if (i == platforms.length - 1) {
+                    allserver += '{"agent":"' + platform + '","serverId":"' + serverId + '","serverIp":"' + serverIp + '","openTime":"' + openTime + '","totalNum":"' + totalNum + '"}';
+                } else {
+                    allserver += '{"agent":"' + platform + '","serverId":"' + serverId + '","serverIp":"' + serverIp + '","openTime":"' + openTime + '","totalNum":"' + totalNum + '"},';
+                }
+            }
+            allserver = "[" + allserver + "]";
+            if (pass) {
+                $.post("openserverSubmit", {allserver: allserver}, function (data) {
+                    if (data.result == "true") {
+                        $("#sub").prop('disabled', true);
+                        $("#add").prop('disabled', true);
+                        $("#butt").append("<button id='result' value='" + data.batchSign + "' class='btn btn-primary'>查看结果</button>")
+                    } else {
+                        bootstrapAlert(data.batchSign);
+                    }
+                });
+            } else {
+                bootstrapAlert(msg);
+            }
+        } else {
+            bootstrapAlert("错误");
+        }
+    });
+
+    $("#result").live("click", function () {
+        $.post("queryResult?sign=" + $("#result").val(), function (data) {
+            if (data.result == "true") {
+                var success = data.resultMap.success;
+                var fail = data.resultMap.fail;
+                var unknow = data.resultMap.unknow;
+                var title = ["平台", "区服", "返回值"];
+                var colnum = ["platformAlias", "serverId", "resultString"];
+                var successTable = createTable(success, title, colnum);
+                var failTable = createTable(fail, title, colnum);
+                var unknowTable = createTable(unknow, title, colnum);
+                var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>" + successTable + "</div>";
+                var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>" + failTable + "</div>";
+                var unknowDiv = "<button id='unknowList' class='btn' style='margin-bottom:10px'>未返回列表</button><div id='unknowTable'>" + unknowTable + "</div>";
+                $("#success").empty().html(successDiv);
+                $("#fail").empty().html(failDiv);
+                $("#unknow").empty().html(unknowDiv);
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+
+
+</script>
+</html>

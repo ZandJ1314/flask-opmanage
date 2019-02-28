@@ -1,0 +1,71 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script>
+	$(document).ready(function() { $("#s1").select2(); });
+	$("#save").click(function(){
+		$.post("addUserSubmit",$("#userForm").serialize(),function(data){
+			if(data.result == "true"){
+				$('#myModal').modal('hide');
+				oTable.fnPageChange( 'first' );
+			}else{
+				var errors = {
+					fieldErrors:data.fieldErrors,
+					errors:data.actionErrors
+				};
+				bootstrapValidation($("#userForm"),errors);
+			}
+		});
+	});
+</script>
+<style type="text/css">
+	input.span01,
+textarea.span01,
+.uneditable-input.span01 {
+  width: 95px;
+}
+</style>
+</head>
+<body>
+<div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>新增用户</h3>
+    </div>
+    <div class="modal-body">
+	<form id="userForm" enctype="multipart/form-data"  class="form-horizontal">
+   		 <div class="control-group ">
+                	<label class="control-label">用户名:</label>
+                	<div class="controls">
+                		<input type="text" style="height:30px" name="user.username"/>
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">密码:</label>
+                	<div class="controls">
+						<input type="password" style="height:30px" name="user.password"/>
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">确认密码:</label>
+                	<div class="controls">
+						<input type="password" style="height:30px" name="confirmPassword"/>
+					</div>
+		</div>
+		 <div class="control-group ">
+                	<label class="control-label">角色:</label>
+                	<div class="controls">
+						<select id="s1" class="span3" list="roleList" headerKey="-1" headerValue="请选择角色" listKey="id" listValue="roleName" name="user.roleId">
+						{% for role in roles %}
+						<option value={{ role }}>{{ role }}</option>
+						{% endfor %}
+						</select>
+					</div>
+		</div>
+		</form>
+		</div>
+    <div class="modal-footer">
+    <a href="javascript:void(0);" id="save" class="btn btn-primary">提交</a>
+    <a href="javascript:void(0);" class="btn" data-dismiss="modal">关闭</a>
+    </div>
+</body>
+</html>

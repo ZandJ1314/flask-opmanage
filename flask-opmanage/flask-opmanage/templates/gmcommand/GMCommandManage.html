@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../static/js/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../static/js/layout/layout-default-latest.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="../static/js/select2/select2.css">
+<link rel="stylesheet" href="../static/js/datepicker/css/datepicker.css">
+<link rel="stylesheet" href="../static/js/chart/morris.css">
+<script src="../static/js/jquery-1.8.3.min.js"></script>
+<script src="../static/js/jquery.dataTables.min.js"></script>
+<script src="../static/js/bootstrap/js/bootstrap.js"></script>
+<script src="../static/js/layout/jquery-ui-latest.js"></script>
+<script src="../static/js/layout/jquery.layout-latest.js"></script>
+<script src="../static/js/my-common.js"></script>
+<script src="../static/js/select2/select2.min.js"></script>
+<script src="../static/js/datepicker/js/bootstrap-datepicker.js"></script>
+<script
+	src="../static/js/datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script src="../static/js/chart/raphael-min.js"></script>
+<script src="../static/js/chart/morris.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="ui-layout-west">
+		{% include "gmcommand/operServerList.html" %}
+	</div>
+	<div class="ui-layout-center">
+		<div class="tabs-custom">
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#gmcommand">GM指令</a></li>
+				<li class=""><a data-toggle="tab" href="#serveronline">综合查询</a></li>
+				<li class=""><a data-toggle="tab" href="#history">执行记录</a></li>
+			</ul>
+			<div class="tab-content">
+				<div id="gmcommand" class="tab-pane fade active in">
+					<div class="well">
+						<form id="GMForm" enctype="multipart/form-data" class="form-horizontal">
+							<div class="control-group ">
+								<label class="control-label">GM指令：</label>
+								<div class="controls">
+									<textarea name="command" cols="" rows="" id="GMForm_command"></textarea>
+								</div>
+							</div>
+						</form>
+						<button id="action" style="margin-left: 180px;" class="btn btn-primary">执行</button>
+					</div>
+					<div class="row-fluid">
+						<div id="fail" class="span6"></div>
+						<div id="success" class="span6"></div>
+					</div>
+
+				</div>
+				
+				<div id="serveronline" class="tab-pane fade in">
+					<div class="well">
+						<form id="checkForm" enctype="multipart/form-data" class="form-horizontal">
+							<div class="control-group ">
+								<label class="control-label">查询类型:</label>
+								<div class="controls">
+									<select id="scheck1" name="scheck1" >
+									<option value="checkonline">区服在线查询</option>
+									<option value="checkopentime">开服时间检查</option>
+									</select>
+								</div>
+							</div>
+						</form>	
+						<button id="onlineQuery" style="margin-left: 180px;" class="btn btn-primary">查询</button>
+					</div>
+					<div class="row-fluid">
+						<div id="onlineFail" class="span6"></div>
+						<div id="onlieSuccess" class="span6"></div>
+					</div>
+				</div>
+				
+				
+				
+				<div id="history" class="tab-pane fade in">
+					<div class="well">
+						<form id="historyForm" enctype="multipart/form-data" class="form-horizontal">
+							<div class="control-group ">
+								<label class="control-label">日期:</label>
+								<div class="controls">
+									<div class="input-daterange" id="datepicker">
+										<input type="text" name="start" readonly="readonly" class="input-small" /> 
+										<span class="add-on">to</span> 
+										<input type="text" name="end" readonly="readonly" class="input-small" />
+									</div>
+								</div>
+							</div>
+						</form>
+						<button id="historyQuery" style="margin-left: 180px;" class="btn btn-primary">查询</button>
+					</div>
+					<div id="actionList"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal hide fade" id="checkModel">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">×</a>
+			<h3>自定义勾选</h3>
+		</div>
+		<div class="modal-body">
+			<textarea id="checkInfo"></textarea>
+		</div>
+		<div class="modal-footer">
+			<a href="javascript:void(0);" id="customCheckSubmit"
+				class="btn btn-primary">确定</a> <a href="javascript:void(0);"
+				class="btn" data-dismiss="modal">关闭</a>
+		</div>
+	</div>
+</body>
+<script>
+	$('.input-daterange').datepicker({
+		language : "zh-CN",
+		autoclose : true,
+		todayBtn : "linked"
+	});
+	$('.input-daterange input').datepicker("setDate", new Date);
+	var batchSign = "";
+	$(document).ready(function() {
+		$('body').layout({
+			west__size : 300
+		});
+	});
+	$(document).ready(function() {
+			$("#s1").select2();
+		});
+		
+	$("#action")
+			.click(
+					function() {
+						var servers = selectedServers();
+						if (servers.length == 0) {
+							bootstrapAlert("请选择区服");
+						} else {
+								if ($('#GMForm_command').val() == ""){
+									bootstrapAlert("GM命令不能为空！")
+								}
+								bootstrapConfirm("确认执行？", function() {
+								var serParm = "";
+								for ( var i = 0; i < servers.length; i++) {
+									if(i == servers.length -1){
+										serParm += '{"zone":"'+servers[i].serverId+'","agent":"'+servers[i].platformAlias+'"}';
+									}else{
+										serParm += '{"zone":"'+servers[i].serverId+'","agent":"'+servers[i].platformAlias+'"},';
+									}
+								}
+								serParm = "&serverinfo=["+serParm+"]";
+								$.post("actionGMCommand", $("#GMForm")
+										.serialize()
+										+ serParm, function(data) {
+									if (data.result == "true") {
+										var successSet = data.resultMap.success;
+										var failSet = data.resultMap.fail;
+										var title = ["平台","区服","结果","状态"];
+										var colnum = ["platform","serverId","resultString","state"];
+										var successTable = createTable(successSet,title,colnum);
+										var failTable = createTable(failSet,title,colnum);
+										var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>"+successTable+"</div>";
+										if (failSet.length == 0){
+											var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>"+failTable+"</div>";
+										} else {
+											var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><button value='"+data.sign+"' id='actionAgain' class='btn btn-success' style='margin:0 10px 10px'>再次执行</button><div id='failTable'>"+failTable+"</div>";
+										}
+										$("#success").empty().html(successDiv);
+										$("#fail").empty().html(failDiv);
+										
+									} else {
+										bootstrapAlert("错误");
+									}
+								});
+							});
+						}
+					});
+					
+	$("#successList").live("click", function() {
+		$("#successTable").slideToggle();
+	});
+	$("#failList").live("click", function() {
+		$("#failTable").slideToggle();
+	});
+	
+	$("#actionAgain").live("click", function() {
+		$.post("actionAgainGm?sign="+$("#actionAgain").val(),function(data){
+			if (data.result == "true"){
+				var successSet = data.resultMap.success;
+				var failSet = data.resultMap.fail;
+				var title = ["平台","区服","结果","状态"];
+				var colnum = ["platform","serverId","resultString","state"];
+				var successTable = createTable(successSet,title,colnum);
+				var failTable = createTable(failSet,title,colnum);
+				var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>"+successTable+"</div>";
+				if (failSet.length == 0){
+					var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>"+failTable+"</div>";
+				} else {
+					var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><button value='"+data.sign+"' id='actionAgain' class='btn btn-success' style='margin:0 10px 10px'>再次执行</button><div id='failTable'>"+failTable+"</div>";
+				}
+				$("#success").empty().html(successDiv);
+				$("#fail").empty().html(failDiv);
+			} else if (data.result == "serversnull") {
+				bootstrapAlert("全部成功，无须再执行");
+			} else {
+				bootstrapAlert("错误");
+			}
+		});
+	});
+	
+	$("#onlineQuery").click(
+		function(){
+			var checkservers = selectedServers();
+			if (checkservers.length == 0){
+				bootstrapAlert("请选择区服");
+			}else{
+				bootstrapConfirm("确认执行？",function(){
+					var serParm = "";
+					for ( var i = 0; i< checkservers.length; i++){
+						if (i == checkservers.length - 1){
+							serParm += '{"zone":"'+servers[i].serverId+'","agent":"'+servers[i].platformAlias+'"}';
+						}else{
+							serParm += '{"zone":"'+servers[i].serverId+'","agent":"'+servers[i].platformAlias+'"},';
+						}
+					}
+					serParm = "&serverinfo=["+serParm+"]";
+					$.post("actionOnline",$('#checkForm').serialize() + serParm,function(data){
+						if (data.result == "true"){
+							var successSet = data.resultMap.success;
+							var failSet = data.resultMap.fail;
+							var title = ["平台","区服","在线"];
+							var colnum = ["platform","serverId","online"];
+							var successTable = createTable(successSet,title,colnum);
+							var failTable = createTable(failSet,title,colnum);
+							var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>"+successTable+"</div>";
+							var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>"+failTable+"</div>";
+							$("#onlieSuccess").empty().html(successDiv);
+							$("#onlineFail").empty().html(failDiv);
+						}else{
+							bootstrapAlert("错误");
+						}
+					});
+				});
+			}
+		});
+
+	$("#historyQuery").click(
+			function() {
+				$.post("gmActionHistory", $("#historyForm").serialize(),
+						function(data) {
+							if (data.result == "true") {
+								var title = [ "时间", "指令", "执行者"];
+								var colnum = [ "sendDate", "command","sendUser"];
+								var table = createTable(data.resultList, title,colnum);
+								$("#actionList").empty().html(table);
+							} else {
+								bootstrapAlert("错误");
+							}
+						});
+			});
+</script>
+</html>

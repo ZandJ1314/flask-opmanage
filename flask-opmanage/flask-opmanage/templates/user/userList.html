@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+ 
+<link href="../static/css/demo_table_jui.css" rel="stylesheet">
+<link href="../static/css/jquery-ui-1.8.16.custom.css" rel="stylesheet">
+<link href="../static/js/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/js/select2/select2.css">
+
+
+
+</head>
+<body>
+	<div style="margin-top:20px;margin-left: auto;margin-right: auto;width:98%">
+	<table id="meterDataExp" width="100%" class="display">
+		<thead>
+			<tr>
+				<th width="10%">编号</th>
+				<th width="15%">用户名</th>
+				<th width="15%">角色名</th>
+				<th width="15%">创建时间</th>
+				<th width="15%">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<div class="modal hide fade" id="myModal"></div>
+	</div>
+</body>
+<script src="../static/js/jquery-1.8.3.min.js"></script>
+<script src="../static/js/jquery.dataTables.min.js"></script>
+<script src="../static/js/bootstrap/js/bootstrap.js"></script>
+<script src="../static/js/select2/select2.min.js"></script>
+<script src="../static/js/my-common.js"></script>
+<script type="text/javascript">
+	oTable = $('#meterDataExp').dataTable({
+		"bProcessing" : true,
+		"bJQueryUI" : true,
+		"bSort" : false,
+		"bFilter" : false,
+		"sPaginationType" : "full_numbers",
+		"sAjaxSource" : "listUser",
+		"bServerSide" : true,
+		"sDom" : '<"H"lr>t<"F"ip>',
+		"fnServerData" : retrieveData,
+		"fnRowCallback" : rowCallback,
+		"aoColumns" : [ {
+			"mDataProp" : "id",
+			"sClass" : "center"
+		}, {
+			"mDataProp" : "username",
+			"sClass" : "center"
+		}, {
+			"mDataProp" : "roleName",
+			"sClass" : "center"
+		}, {
+			"mDataProp" : "createTime",
+			"sClass" : "center"
+		}, {
+			"mData" : null,
+			"sClass" : "center"
+		} ],
+		"oLanguage" : {
+			"oPaginate" : {
+				"sFirst" : "首页",
+				"sLast" : "末页",
+				"sNext" : "下一页",
+				"sPrevious" : "上一页",
+			},
+			"sInfo" : "显示_START_到_END_条，共_TOTAL_条",
+			"sEmptyTable" : "没有数据",
+			"sInfoEmpty" : "没有数据",
+			"sLengthMenu" : "每页显示 _MENU_ 条",
+			"sLoadingRecords" : "正在加载...",
+			"sProcessing" : "正在加载...",
+			"sSearch" : "搜索"
+		}
+	});
+	$('.dataTables_length').css("float", "right");
+	$('.dataTables_length').parent().append("<div style='float:left;'><a data-backdrop='static' class='btn btn-primary' id='newUser'><i class='icon-user icon-white'></i>新增用户</a></div>");
+	function rowCallback(nRow, aData, iDisplayIndex) {
+		var date = new Date(aData.createTime);
+		//$('td:eq(3)', nRow).html(date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日");
+		$('td:eq(4)', nRow).html("<button value="+aData.id+" class='btn btn-info'><i class='icon-edit icon-white'></i>编辑</i></button><button value="+aData.id+" class='btn btn-danger'><i class='icon-trash icon-white'></i>删除</i></button>");
+	}
+	function retrieveData(sSource, aoData, fnCallback) {
+		var pageSize = fnGetKey(aoData, "iDisplayLength");
+		var startRow = fnGetKey(aoData, "iDisplayStart");
+		$.ajax({
+			"type" : "POST",
+			"url" : sSource,
+			"dataType" : "json",
+			"data" : {
+				pageSize : pageSize,
+				startRow : startRow,
+			
+			},
+			"success" : function(resp) {
+				fnCallback(resp.result);
+			}
+		});
+	}
+	function fnGetKey(aoData, sKey) {
+		for ( var i = 0, iLen = aoData.length; i < iLen; i++) {
+			if (aoData[i].name == sKey) {
+				return aoData[i].value;
+			}
+		}
+		return null;
+	}
+	$("#newUser").click(function() {
+		$.get("/addUserSubmit", function(data) {
+			$("#myModal").html(data);
+			$('#myModal').modal({
+				backdrop : 'static'
+			});
+		});
+	});
+	$(".btn-danger").die().live("click", function() {
+		var id = $(this).val();
+		function callback() {
+			$.get("deleteUser?userId=" + id, function(data) {
+				if (data.result == "true") {
+					oTable.fnPageChange('first');
+				} else {
+					alert("失败！");
+				}
+			});
+		}
+		bootstrapConfirm("确定删除吗？", callback);
+	});
+	$(".btn-info").die().live("click", function() {
+		var id = $(this).val();
+		$.get("editUserSubmit?userId=" + id, function(data) {
+			$("#myModal").html(data);
+			$('#myModal').modal({
+				backdrop : 'static'
+			});
+		});
+	});
+</script>
+</html>
