@@ -1,0 +1,166 @@
+2018-09-27 15:36:18,290 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-09-27 15:36:18,709 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2018-09-27 15:38:33,941 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-09-27 15:38:33,957 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-09-27 15:38:34,197 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2018-09-27 15:38:34,218 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2018-09-27 18:35:24,965 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-09-27 18:35:25,877 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2018-09-27 19:11:59,985 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-09-27 19:12:00,505 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2018-09-27 19:16:04,085 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 397, in open
+    response = meth(req, response)
+  File "/usr/lib64/python2.6/urllib2.py", line 510, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib64/python2.6/urllib2.py", line 435, in error
+    return self._call_chain(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 518, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 502: Bad Gateway
+
+2018-09-27 19:23:40,592 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2018-09-27 19:23:40,592 level-ERROR    Exception on /checkState [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 498, in checkState
+    if int(checkResultJson[xi]['code']) == 2:
+KeyError: 0
+2018-09-27 19:23:49,437 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-09-27 19:23:52,353 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2018-09-27 19:24:08,710 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2018-09-27 19:24:08,711 level-ERROR    Exception on /checkState [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 498, in checkState
+    if int(checkResultJson[xi]['code']) == 2:
+KeyError: 0
+2018-09-27 19:31:17,870 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 397, in open
+    response = meth(req, response)
+  File "/usr/lib64/python2.6/urllib2.py", line 510, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib64/python2.6/urllib2.py", line 435, in error
+    return self._call_chain(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 518, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 502: Bad Gateway
+
+2018-09-27 19:32:09,194 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 397, in open
+    response = meth(req, response)
+  File "/usr/lib64/python2.6/urllib2.py", line 510, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib64/python2.6/urllib2.py", line 435, in error
+    return self._call_chain(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 518, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 502: Bad Gateway
+
+2018-09-27 19:33:54,419 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 397, in open
+    response = meth(req, response)
+  File "/usr/lib64/python2.6/urllib2.py", line 510, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib64/python2.6/urllib2.py", line 435, in error
+    return self._call_chain(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 518, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 502: Bad Gateway
+
+2018-09-27 19:39:57,951 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-09-27 19:39:59,902 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2018-09-27 19:40:07,014 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 397, in open
+    response = meth(req, response)
+  File "/usr/lib64/python2.6/urllib2.py", line 510, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib64/python2.6/urllib2.py", line 435, in error
+    return self._call_chain(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 518, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 502: Bad Gateway
+
+2018-09-27 19:40:23,934 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 397, in open
+    response = meth(req, response)
+  File "/usr/lib64/python2.6/urllib2.py", line 510, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib64/python2.6/urllib2.py", line 435, in error
+    return self._call_chain(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 518, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 502: Bad Gateway
+

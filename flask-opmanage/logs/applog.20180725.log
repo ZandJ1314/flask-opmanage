@@ -1,0 +1,488 @@
+2018-07-24 09:19:24,743 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 09:19:32,271 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 09:19:32,746 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:19:33,742 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 09:19:40,273 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:19:40,747 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:19:41,744 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:19:48,276 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:19:49,747 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:20:49,122 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 09:20:51,856 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 09:20:57,124 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:20:59,858 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:21:05,127 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 09:21:07,864 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:01:30,286 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 10:01:38,301 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:01:40,790 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 10:01:46,305 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:01:48,793 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:01:52,586 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 10:01:56,796 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:01:58,068 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 10:02:00,592 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:02:06,070 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:02:06,752 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 10:02:08,596 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:02:14,073 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:02:14,754 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:02:22,757 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:03:17,878 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:08:42,599 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:08:49,977 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 10:08:57,978 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 36, in getagent
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:09:05,979 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:09:30,264 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1165, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+
+2018-07-24 10:51:44,352 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 10:51:44,702 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 15, 'platformAlias': u'108qu_rxsj', 'gameId': 27, 'configId': 3, 'platformName': u'108qu_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 17, 'platformAlias': u'354yx_rxsj', 'gameId': 27, 'configId': 5, 'platformName': u'354yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 31, 'platformAlias': u'511wan_rxsj', 'gameId': 27, 'configId': 31, 'platformName': u'511wan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}]
+2018-07-24 15:22:05,422 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 15:22:05,626 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 15, 'platformAlias': u'108qu_rxsj', 'gameId': 27, 'configId': 3, 'platformName': u'108qu_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 17, 'platformAlias': u'354yx_rxsj', 'gameId': 27, 'configId': 5, 'platformName': u'354yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 31, 'platformAlias': u'511wan_rxsj', 'gameId': 27, 'configId': 31, 'platformName': u'511wan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}]
+2018-07-24 15:24:36,096 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"33\", \"platformAlias\": \"5vwan_rxsj\", \"isCombined\": \"false\", \"configId\": 33, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"13\", \"serverName\": \"5vwan_rxsj 13\\u670d\", \"serverIp\": \"47.93.214.190\", \"serverOrder\": \"0\", \"serverId\": \"13\", \"platformName\": \"5vwan_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "2D330AF31AF21E105106870450D5A307", "time": 1532417076000}
+2018-07-24 15:24:36,281 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:24:36,282 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"33\", \"platformAlias\": \"5vwan_rxsj\", \"isCombined\": \"false\", \"configId\": 33, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"13\", \"serverName\": \"5vwan_rxsj 14\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"14\", \"platformName\": \"5vwan_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "2D330AF31AF21E105106870450D5A307", "time": 1532417076000}
+2018-07-24 15:24:36,417 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:24:36,418 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"33\", \"platformAlias\": \"5vwan_rxsj\", \"isCombined\": \"false\", \"configId\": 33, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"13\", \"serverName\": \"5vwan_rxsj 15\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"15\", \"platformName\": \"5vwan_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "2D330AF31AF21E105106870450D5A307", "time": 1532417076000}
+2018-07-24 15:24:36,545 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:24:36,545 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"33\", \"platformAlias\": \"5vwan_rxsj\", \"isCombined\": \"false\", \"configId\": 33, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"13\", \"serverName\": \"5vwan_rxsj 16\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"16\", \"platformName\": \"5vwan_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "2D330AF31AF21E105106870450D5A307", "time": 1532417076000}
+2018-07-24 15:24:36,683 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:24:36,683 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"33\", \"platformAlias\": \"5vwan_rxsj\", \"isCombined\": \"false\", \"configId\": 33, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"13\", \"serverName\": \"5vwan_rxsj 17\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"17\", \"platformName\": \"5vwan_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "2D330AF31AF21E105106870450D5A307", "time": 1532417076000}
+2018-07-24 15:24:36,820 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:24:36,821 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"33\", \"platformAlias\": \"5vwan_rxsj\", \"isCombined\": \"false\", \"configId\": 33, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"13\", \"serverName\": \"5vwan_rxsj 18\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"18\", \"platformName\": \"5vwan_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "2D330AF31AF21E105106870450D5A307", "time": 1532417076000}
+2018-07-24 15:24:36,953 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:26:13,058 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"29\", \"platformAlias\": \"aiyx666_rxsj\", \"isCombined\": \"false\", \"configId\": 29, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"aiyx666_rxsj 19\\u670d\", \"serverIp\": \"47.93.214.190\", \"serverOrder\": \"0\", \"serverId\": \"19\", \"platformName\": \"aiyx666_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "DF8E77045D2DAD8F4489EE2557B283CF", "time": 1532417173000}
+2018-07-24 15:26:13,535 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:26:13,535 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"29\", \"platformAlias\": \"aiyx666_rxsj\", \"isCombined\": \"false\", \"configId\": 29, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"aiyx666_rxsj 20\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"20\", \"platformName\": \"aiyx666_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "DF8E77045D2DAD8F4489EE2557B283CF", "time": 1532417173000}
+2018-07-24 15:26:13,668 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:26:13,669 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"29\", \"platformAlias\": \"aiyx666_rxsj\", \"isCombined\": \"false\", \"configId\": 29, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"aiyx666_rxsj 21\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"21\", \"platformName\": \"aiyx666_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "DF8E77045D2DAD8F4489EE2557B283CF", "time": 1532417173000}
+2018-07-24 15:26:13,797 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:26:13,797 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"29\", \"platformAlias\": \"aiyx666_rxsj\", \"isCombined\": \"false\", \"configId\": 29, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"aiyx666_rxsj 22\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"22\", \"platformName\": \"aiyx666_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "DF8E77045D2DAD8F4489EE2557B283CF", "time": 1532417173000}
+2018-07-24 15:26:13,943 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:26:13,944 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"29\", \"platformAlias\": \"aiyx666_rxsj\", \"isCombined\": \"false\", \"configId\": 29, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"aiyx666_rxsj 23\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"23\", \"platformName\": \"aiyx666_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "DF8E77045D2DAD8F4489EE2557B283CF", "time": 1532417173000}
+2018-07-24 15:26:14,096 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:26:14,097 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"29\", \"platformAlias\": \"aiyx666_rxsj\", \"isCombined\": \"false\", \"configId\": 29, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"aiyx666_rxsj 24\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"24\", \"platformName\": \"aiyx666_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "4C71E13E8858CF229FD81BD4A3119245", "time": 1532417174000}
+2018-07-24 15:26:14,227 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:26:21,204 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 15:26:21,359 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 15, 'platformAlias': u'108qu_rxsj', 'gameId': 27, 'configId': 3, 'platformName': u'108qu_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 17, 'platformAlias': u'354yx_rxsj', 'gameId': 27, 'configId': 5, 'platformName': u'354yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 31, 'platformAlias': u'511wan_rxsj', 'gameId': 27, 'configId': 31, 'platformName': u'511wan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}]
+2018-07-24 15:37:27,009 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 15:37:27,167 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 15, 'platformAlias': u'108qu_rxsj', 'gameId': 27, 'configId': 3, 'platformName': u'108qu_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 17, 'platformAlias': u'354yx_rxsj', 'gameId': 27, 'configId': 5, 'platformName': u'354yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 31, 'platformAlias': u'511wan_rxsj', 'gameId': 27, 'configId': 31, 'platformName': u'511wan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}]
+2018-07-24 15:38:43,788 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"32\", \"platformAlias\": \"7u6u_rxsj\", \"isCombined\": \"false\", \"configId\": 32, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"7u6u_rxsj 19\\u670d\", \"serverIp\": \"47.93.214.190\", \"serverOrder\": \"0\", \"serverId\": \"19\", \"platformName\": \"7u6u_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "667E531D138C892F5BB99004D2AD4D4A", "time": 1532417923000}
+2018-07-24 15:38:43,930 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:38:43,931 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"32\", \"platformAlias\": \"7u6u_rxsj\", \"isCombined\": \"false\", \"configId\": 32, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"7u6u_rxsj 20\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"20\", \"platformName\": \"7u6u_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "667E531D138C892F5BB99004D2AD4D4A", "time": 1532417923000}
+2018-07-24 15:38:44,061 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:38:44,061 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"32\", \"platformAlias\": \"7u6u_rxsj\", \"isCombined\": \"false\", \"configId\": 32, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"7u6u_rxsj 21\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"21\", \"platformName\": \"7u6u_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "F33BD94022A87B35A747DC67A72BA2C4", "time": 1532417924000}
+2018-07-24 15:38:44,188 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:38:44,189 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"32\", \"platformAlias\": \"7u6u_rxsj\", \"isCombined\": \"false\", \"configId\": 32, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"7u6u_rxsj 22\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"22\", \"platformName\": \"7u6u_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "F33BD94022A87B35A747DC67A72BA2C4", "time": 1532417924000}
+2018-07-24 15:38:44,317 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:38:44,318 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"32\", \"platformAlias\": \"7u6u_rxsj\", \"isCombined\": \"false\", \"configId\": 32, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"7u6u_rxsj 23\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"23\", \"platformName\": \"7u6u_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "F33BD94022A87B35A747DC67A72BA2C4", "time": 1532417924000}
+2018-07-24 15:38:44,432 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:38:44,433 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"32\", \"platformAlias\": \"7u6u_rxsj\", \"isCombined\": \"false\", \"configId\": 32, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"19\", \"serverName\": \"7u6u_rxsj 24\\u670d\", \"serverIp\": \"111.230.177.151\", \"serverOrder\": \"0\", \"serverId\": \"24\", \"platformName\": \"7u6u_rxsj\"}]", "gameId": "27", "systemId": "27", "sign": "F33BD94022A87B35A747DC67A72BA2C4", "time": 1532417924000}
+2018-07-24 15:38:44,553 level-ERROR    insert mds result : {"result":"true"}
+2018-07-24 15:38:51,218 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 15:38:51,357 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 15, 'platformAlias': u'108qu_rxsj', 'gameId': 27, 'configId': 3, 'platformName': u'108qu_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 17, 'platformAlias': u'354yx_rxsj', 'gameId': 27, 'configId': 5, 'platformName': u'354yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 31, 'platformAlias': u'511wan_rxsj', 'gameId': 27, 'configId': 31, 'platformName': u'511wan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}]
+2018-07-24 17:24:56,995 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-07-24 17:24:57,186 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 15, 'platformAlias': u'108qu_rxsj', 'gameId': 27, 'configId': 3, 'platformName': u'108qu_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 17, 'platformAlias': u'354yx_rxsj', 'gameId': 27, 'configId': 5, 'platformName': u'354yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 31, 'platformAlias': u'511wan_rxsj', 'gameId': 27, 'configId': 31, 'platformName': u'511wan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}]
+2018-07-24 17:36:29,736 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-07-24 17:36:29,925 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 15, 'platformAlias': u'108qu_rxsj', 'gameId': 27, 'configId': 3, 'platformName': u'108qu_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 17, 'platformAlias': u'354yx_rxsj', 'gameId': 27, 'configId': 5, 'platformName': u'354yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 31, 'platformAlias': u'511wan_rxsj', 'gameId': 27, 'configId': 31, 'platformName': u'511wan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}]
+2018-07-24 17:36:37,923 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2018-07-24 17:36:38,071 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 15, 'platformAlias': u'108qu_rxsj', 'gameId': 27, 'configId': 3, 'platformName': u'108qu_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 17, 'platformAlias': u'354yx_rxsj', 'gameId': 27, 'configId': 5, 'platformName': u'354yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 26, 'platformAlias': u'306yx_rxsj', 'gameId': 27, 'configId': 26, 'platformName': u'306yx_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 29, 'platformAlias': u'aiyx666_rxsj', 'gameId': 27, 'configId': 29, 'platformName': u'aiyx666_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 31, 'platformAlias': u'511wan_rxsj', 'gameId': 27, 'configId': 31, 'platformName': u'511wan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 32, 'platformAlias': u'7u6u_rxsj', 'gameId': 27, 'configId': 32, 'platformName': u'7u6u_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 33, 'platformAlias': u'5vwan_rxsj', 'gameId': 27, 'configId': 33, 'platformName': u'5vwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}]

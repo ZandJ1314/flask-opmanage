@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../static/js/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../static/js/layout/layout-default-latest.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="../static/js/select2/select2.css">
+<link rel="stylesheet" href="../static/js/datepicker2/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="../static/js/chart/morris.css">
+<script src="../static/js/jquery-1.8.3.min.js"></script>
+<script src="../static/js/jquery.dataTables.min.js"></script>
+<script src="../static/js/bootstrap/js/bootstrap.js"></script>
+<script src="../static/js/layout/jquery-ui-latest.js"></script>
+<script src="../static/js/layout/jquery.layout-latest.js"></script>
+<script src="../static/js/my-common.js"></script>
+<script src="../static/js/select2/select2.min.js"></script>
+<script src="../static/js/datepicker2/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../static/js/datepicker2/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="../static/js/chart/raphael-min.js"></script>
+<script src="../static/js/chart/morris.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<div id="content" style="margin-top:20px;margin-left:100px;margin-right:100px">
+	<div id="butt" style="text-align:center">
+		<!--button id="itemver" value="gVER" class="btn btn-info">前端主程序item版本</button>
+		<button id="glverver" value="glver" class="btn btn-info">glver版本</button>
+		<button id="stictver" value="stresver" class="btn btn-info">前端静态版本</button>
+		<button id="dynamicver" value="rESVER" class="btn btn-info">前端动态版本</button>
+		<button id="bootver" value="bOOTVER" class="btn btn-info">前端boot版本</button-->
+		<button id="javasvnver" value="javaver" class="btn btn-info">JAVA_SVN版本</button>
+		<!--button id="javajarver" value="javajarver" class="btn btn-info">JAVA_JAR版本</button>
+		<button id="gamedataver" value="gamedataver" class="btn btn-info">策划数据库版本</button-->
+	</div>
+</div>
+	<div style="margin:20px">
+		<div id="verResult" style="margin:0 auto;max-width:800px">
+		</div>
+	</div>
+	
+</body>
+<script>
+
+$("#itemver").click(function(){
+	$.post("actioncheckver?ver="+$("#itemver").val(),function(data){
+		if (data.result == "true"){
+			var title = ["版本号","区服","总数"];
+			var colnum = ["version","zones","total"];
+			var versionTable = createTable(data.resultList,title,colnum);
+			$("#verResult").empty().html(versionTable);
+		}else{
+			bootstrapAlert("错误");
+		}
+	});
+});
+
+$("#glverver").click(function(){
+	$.post("actioncheckver?ver="+$("#glverver").val(),function(data){
+		if (data.result == "true"){
+			var title = ["版本号","区服","总数"];
+			var colnum = ["version","zones","total"];
+			var versionTable = createTable(data.resultList,title,colnum);
+			$("#verResult").empty().html(versionTable);
+		}else{
+			bootstrapAlert("错误");
+		}
+	});
+});
+
+
+
+
+$("#stictver").click(function(){
+	$.post("actioncheckver?ver="+$("#stictver").val(),function(data){
+		if (data.result == "true"){
+			var title = ["版本号","区服","总数"];
+			var colnum = ["version","zones","total"];
+			var versionTable = createTable(data.resultList,title,colnum);
+			$("#verResult").empty().html(versionTable);
+		}else{
+			bootstrapAlert("错误");
+		}
+	});
+});
+
+$("#dynamicver").click(function(){
+	$.post("actioncheckver?ver="+$("#dynamicver").val(),function(data){
+		if (data.result == "true"){
+			var title = ["版本号","区服","总数"];
+			var colnum = ["version","zones","total"];
+			var versionTable = createTable(data.resultList,title,colnum);
+			$("#verResult").empty().html(versionTable);
+		}else{
+			bootstrapAlert("错误");
+		}
+	});
+});
+
+$("#bootver").click(function(){
+	$.post("actioncheckver?ver="+$("#bootver").val(),function(data){
+		if (data.result == "true"){
+			var title = ["版本号","区服","总数"];
+			var colnum = ["version","zones","total"];
+			var versionTable = createTable(data.resultList,title,colnum);
+			$("#verResult").empty().html(versionTable);
+		}else{
+			bootstrapAlert("错误");
+		}
+	});
+});
+
+
+$("#javasvnver").click(function(){
+	$.post("actioncheckver?ver="+$("#javasvnver").val(),function(data){
+		if (data.result == "true"){
+			var title = ["版本号","区服","总数"];
+			var colnum = ["version","zones","total"];
+			var versionTable = createTable(data.resultList,title,colnum);
+			$("#verResult").html(versionTable);
+		}else{
+			bootstrapAlert("错误");
+		}
+	});
+});
+
+
+$("#javajarver").click(function(){
+	$.post("actioncheckver?ver="+$("#javajarver").val(),function(data){
+		if (data.result == "true"){
+			var title = ["版本号","区服","总数"];
+			var colnum = ["version","zones","total"];
+			var versionTable = createTable(data.resultList,title,colnum);
+			$("#verResult").empty().html(versionTable);
+		}else{
+			bootstrapAlert("错误");
+		}
+	});
+});
+
+
+$("#gamedataver").click(function(){
+	$.post("actioncheckver?ver="+$("#gamedataver").val(),function(data){
+		if (data.result == "true"){
+			var title = ["版本号","区服","总数"];
+			var colnum = ["version","zones","total"];
+			var versionTable = createTable(data.resultList,title,colnum);
+			$("#verResult").empty().html(versionTable);
+		}else{
+			bootstrapAlert("错误");
+		}
+	});
+});
+
+
+
+
+
+	
+</script>
+</html>

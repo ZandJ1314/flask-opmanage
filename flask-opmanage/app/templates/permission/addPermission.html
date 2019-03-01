@@ -1,0 +1,63 @@
+<div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>新增权限</h3>
+    </div>
+    <div class="modal-body">
+    	<form id="permissionForm" enctype="multipart/form-data"  class="form-horizontal">
+    	 <div class="control-group ">
+                	<label class="control-label">父节点:</label>
+                	<div class="controls">
+						<select class="span3" id="s1" list="permissionList" listKey="id" listValue="permissionDesc" name="permission.parentId">
+						{% for parserole in parseroles %}
+						<option value={{ parserole }}>{{ parserole }}</option>
+						{% endfor %}
+						</select>
+					</div>
+		</div>
+   		 <div class="control-group ">
+                	<label class="control-label">权限名称:</label>
+                	<div class="controls">
+                		<input type="text" style="height:30px" name="permission.permissionName"/>
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">权限描述:</label>
+                	<div class="controls">
+						<input type="text" style="height:30px" name="permission.permissionDesc"/>
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">权限LEVEL:</label>
+                	<div class="controls">
+						<select class="span2" id="s2" list="LevelList" listKey="id" listValue="LevelList" name="permission.level">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						</select>
+					</div>
+		</div>
+   		
+		
+		</form>
+    </div>
+    <div class="modal-footer">
+    <a href="javascript:void(0);" id="save" class="btn btn-primary">保存</a>
+    <a href="javascript:void(0);" class="btn" data-dismiss="modal">关闭</a>
+    </div>
+    <script type="text/javascript">
+   		$(document).ready(function() { $("#s1").select2(); });
+    	$("#save").click(function(){
+    		$.post("addPermissionSubmit",$("#permissionForm").serialize(),function(data){
+    			if(data.result == "true"){
+    				$('#myModal').modal('hide');
+    				oTable.fnPageChange( 'first' );
+    			}else{
+    				var errors = {
+    					fieldErrors:data.fieldErrors,
+    					errors:data.actionErrors
+    				}
+    				bootstrapValidation($("#permissionForm"),errors);
+    			}
+    		});
+    	});
+    
+    </script>

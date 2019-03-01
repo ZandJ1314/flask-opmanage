@@ -54,16 +54,6 @@ def login():
 	else:
 		return redirect(url_for('.index'))
 
-@main.route('/119.29.218.162:8091',methods=['POST'])
-def infoindex():
-	username = request.form["name"]
-	jessionid = request.form["jsessionid"]
-	strbyte = base64.b64decode(jessionid)
-	permissionstr = strbyte.decode()
-	permisssionlist = permissionstr.split(',')
-	DataInfo = {"username": username, "permissionList": permisssionlist}
-	return render_template('main/authentication.html', DataInfo=DataInfo)
-
 
 
 

@@ -1,0 +1,50 @@
+<div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>修改权限</h3>
+    </div>
+    <div class="modal-body">
+    	<form id="permissionForm" enctype="multipart/form-data"  class="form-horizontal">
+		 <input type="hidden" name="permission.id" id="permission.id" value={{ permissionId }} />
+   		 <div class="control-group ">
+                	<label class="control-label">权限名称:</label>
+                	<div class="controls">
+                		<input type="text" style="height:30px" name="permission.permissionName"/>
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">权限描述:</label>
+                	<div class="controls">
+						<input type="text" style="height:30px" name="permission.permissionDesc"/>
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">权限URL:</label>
+                	<div class="controls">
+						<input type="text" style="height:30px" name="permission.permissionURL"/>
+					</div>
+		</div>
+  
+		
+		</s:form>
+    </div>
+    <div class="modal-footer">
+    <a href="javascript:void(0);" id="save" class="btn btn-primary">保存</a>
+    <a href="javascript:void(0);" class="btn" data-dismiss="modal">关闭</a>
+    </div>
+    <script type="text/javascript">
+    	$("#save").click(function(){
+    		$.post("editPermissionSubmit",$("#permissionForm").serialize(),function(data){
+    			if(data.result == "true"){
+    				$('#myModal').modal('hide');
+    				oTable.fnPageChange( 'first' );
+    			}else{
+    				var errors = {
+    					fieldErrors:data.fieldErrors,
+    					errors:data.actionErrors
+    				}
+    				bootstrapValidation($("#permissionForm"),errors);
+    			}
+    		});
+    	});
+    
+    </script>

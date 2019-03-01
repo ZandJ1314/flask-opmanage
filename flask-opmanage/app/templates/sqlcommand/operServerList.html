@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../static/js/tree/css/zTreeStyle.css" rel="stylesheet">
+<script src="../static/js/tree/jquery.ztree.all-3.5.js"></script>
+<title></title>
+<style>
+.mywell {padding:5px}
+.input-small {margin-bottom:1px !important}
+</style>
+</head>
+		<div class="row-fluid">
+			<button id="quick" style="width:100%" class="btn btn-mini"><i id="icon" class="icon-chevron-down"></i></button>
+			<div id="pane" style="display:none" class="well mywell">
+					<select id="sn">
+					{% for agent in AllInfo['agent'] %}
+					<option value={{ agent }}>{{ agent }}</option>
+					{% endfor %}
+					</select>
+					<input class="input-small" type="text" id="text"/>
+					<button id="check" class="btn">勾选</button>
+					<div style="margin-top:10px"><button id="customCheck" class="btn btn-primary">自定义勾选</button></div>
+			</div>
+		</div>
+		<ul id="treeDemo" class="ztree"></ul>
+		<script type="text/javascript">
+		$("#customCheck").click(function(){
+			$("#checkModel").modal({
+				backdrop : 'static'
+			});
+		});
+		$("#customCheckSubmit").live("click",function(){
+			var checkInfo = $("#checkInfo").val();
+			var infoArray = checkInfo.split("\n");
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.checkAllNodes(false);
+			var hide = true;
+			for(var i=0;i<infoArray.length;i++){
+				var platformInfo = infoArray[i];
+				if(platformInfo!=""){
+					var platformArray = platformInfo.split(":");
+					if(platformArray.length != 2){
+						alert("格式错误");
+						hide = false;
+						break;
+					}else{
+						var platformName = platformArray[0];
+						if(zTree.setting.check.enable){
+							var parentNode = zTree.getNodeByParam("name", platformName, null);
+							if(parentNode == null){
+								alert("没有该平台："+platformName);
+								hide = false;
+								break;
+							}else{
+								if(platformArray[0] != ""){
+									var id = platformArray[1].split(",");
+									for(var k=0;k<id.length;k++){
+										var to = new Array();
+										to = id[k].split("-");
+										if(to.length == 1){
+											var node = zTree.getNodeByParam("serverId", id[k], parentNode);
+											if(node != null){
+												zTree.checkNode(node,true,true,false);
+											}
+										}else if(to.length == 2){
+											var start =  Number(to[0]);
+											var end =  Number(to[1]);
+											for(var j=start;j<=end;j++){
+												var node = zTree.getNodeByParam("serverId", j, parentNode);
+												if(node != null){
+													zTree.checkNode(node,true,true,false);
+												}
+											}
+										}
+									}
+								}
+							}
+							
+						}
+					}
+				}
+			}
+			if(hide){
+				$('#checkModel').modal('hide');
+			}
+		})
+		$('#text').popover({title:"使用说明",
+							content:"输入要勾选的区服ID，格式为：1,2,3 或 1-10",
+							placement:"bottom",
+							trigger:"manual"
+							});
+		$(document).ready(function() { $("#sn").select2(); });
+		$("#text").focus(function(){
+			$("#text").popover('show');
+		});
+		$("#text").blur(function(){
+			$("#text").popover('hide');
+		});
+		$("#check").die().live("click",function(){
+			var ids =$.trim($("#text").val());
+			if(ids != ""){
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.checkAllNodes(false);
+				if(zTree.setting.check.enable){
+					var platformAlias = $("#sn").val();
+					var parentNode = zTree.getNodeByParam("name", platformAlias, null);
+					var id = new Array();
+					id = ids.split(",");
+					for(var i=0;i<id.length;i++){
+						var to = new Array();
+						to = id[i].split("-");
+						if(to.length == 1){
+							var node = zTree.getNodeByParam("serverId", id[i], parentNode);
+							if(node != null){
+								zTree.checkNode(node,true,true,false);
+							}
+						}else if(to.length == 2){
+							var start =  Number(to[0]);
+							var end =  Number(to[1]);
+							for(var j=start;j<=end;j++){
+								var node = zTree.getNodeByParam("serverId", j, parentNode);
+								if(node != null){
+									zTree.checkNode(node,true,true,false);
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+		$("#quick").die().live("click",function(){
+			if($("#pane")[0].style.display=="none"){
+				$("#pane").slideDown();
+				$("#icon").removeClass("icon-chevron-down");
+				$("#icon").addClass("icon-chevron-up");
+			}else {
+ 				$("#pane").slideUp();
+ 				$("#icon").removeClass("icon-chevron-up");
+ 				$("#icon").addClass("icon-chevron-down");
+			}
+		});
+		
+		var setting = {
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onClick: onClick,
+				beforeClick:beforeClick
+			}
+			
+		};
+		var zNodes = {{ AllInfo['yxTreeNodes'] | safe }};
+		function beforeClick(treeId, treeNode, clickFlag){
+			if(clickFlag == 2){
+				return false;
+			}else{
+				return true;
+			}
+		}
+		var servers = new Array();
+		function onClick(e,treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.expandNode(treeNode);
+			if(typeof(treeNode.serverId) != "undefined"){
+				servers.pop();
+				servers.push({serverId: treeNode["serverId"], platformAlias:treeNode["platformAlias"]});
+			}else{
+				servers.pop();
+			}
+		}
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		function selectedServers(){
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			if(zTree.setting.check.enable){
+				var checkedNodes =zTree.getCheckedNodes(true);
+				servers = new Array();
+		   		for(var key in checkedNodes) {
+		    		var obj = checkedNodes[key];
+		    		if(obj["serverId"] == null || obj["serverId"] == "") continue;
+		    		servers.push({serverId: obj["serverId"], platformAlias:obj["platformAlias"]});
+		    	}
+			}
+		    return servers;
+		};
+		$("#text").keydown(function(e){
+			if(e.keyCode==13){
+				$("#check").trigger("click");
+			}
+		}); 
+</script>

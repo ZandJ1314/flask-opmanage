@@ -1,0 +1,137 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../static/js/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../static/js/layout/layout-default-latest.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/js/select2/select2.css">
+<link rel="stylesheet" href="../static/js/datepicker/css/datepicker.css">
+<link rel="stylesheet" href="../static/js/chart/morris.css">
+<script src="../static/js/jquery-1.8.3.min.js"></script>
+<script src="../static/js/jquery.dataTables.min.js"></script>
+<script src="../static/js/bootstrap/js/bootstrap.js"></script>
+<script src="../static/js/layout/jquery-ui-latest.js"></script>
+<script src="../static/js/layout/jquery.layout-latest.js"></script>
+<script src="../static/js/my-common.js"></script>
+<script src="../static/js/select2/select2.min.js"></script>
+<script src="../static/js/datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../static/js/datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script src="../static/js/chart/raphael-min.js"></script>
+<script src="../static/js/chart/morris.min.js"></script>
+<title>Insert title here</title>
+
+<style type="text/css">
+.comments{
+border:1px solid #666666;
+width:100%;
+height:100%;
+}
+</style>
+
+</head>
+<body>
+	<div class="ui-layout-center">
+		<div class="tabs-custom">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a data-toggle="tab" href="#phpLogCheck">php日志查看</a>
+				</li>
+				<li class="">
+					<a data-toggle="tab" href="#phpLogDownload">php日志下载</a>
+				</li>
+			</ul>
+		</div>
+		<div class="tab-content">
+			<div id="phpLogCheck" class="tab-pane active">
+				<div class="well">
+					<form id="phpLogCheckForm" enctype="multipart/form-data" class="form-inline">
+						<select id="s1" class="span3" list="agentList" headerKey="-1" headerValue="请选择平台" listKey="id" listValue="agent" name="agentList">
+						{% for agent in AllInfo['allagents'] %}
+						<option value={{ agent }}>{{ agent }}</option>
+						{% endfor %}
+						</select>
+						<select id="s2" class="span3" list="logsList" headerKey="-1" headerValue="请选择日志" listKey="id" listValue="logs" name="logsList">
+						{% for logpath in AllInfo['logpaths'] %}
+						<option value={{ logpath }}>{{ logpath }}</option>
+						{% endfor %}
+						</select>
+						<input type="text" style="height:30px" class="input-medium"  placeholder="请选择时间" id="datepicker" name="checkTime">
+						<input type="text" style="height:30px" class="input-medium" placeholder="输入查看区服" name="checkzone">
+						<input type="text" style="height:30px" class="input-medium" placeholder="输入查看条数" name="checknum">
+					</form>
+					<button id="phpLogCheckBtn" style="margin-left:180px;" class="btn btn-primary">确定</button>
+					<button id="addphplogpathBtn" class="btn btn-primary">添加日志路径</button>
+				</div>
+				<div class="modal hide fade" id="myModal"></div>
+				<div id="phpLogCheckMsg"></div>
+			</div>
+			
+			
+			<div id="phpLogDownload" class="tab-pane fade">
+				<div class="well">
+					<form id="phpDownForm" enctype="multipart/form-data" class="form-horizontal">
+						<select id="s3" class="span3" list="agentList" headerKey="-1" headerValue="请选择平台" listKey="id" listValue="agent" name="agentList">
+						{% for agent in AllInfo['allagents'] %}
+						<option value={{ agent }}>{{ agent }}</option>
+						{% endfor %}
+						</select>
+						<select id="s4" class="span3" list="logsList" headerKey="-1" headerValue="请选择日志" listKey="id" listValue="logs" name="logsList">
+						{% for logpath in AllInfo['logpaths'] %}
+						<option value={{ logpath }}>{{ logpath }}</option>
+						{% endfor %}
+						</select>
+						<input type="text" style="height:30px" class="input-medium"  placeholder="请选择时间" id="Downdatepicker" name="checkTime">
+						<input type="text" style="height:30px" class="input-medium" placeholder="输入查看区服" name="checkzone">
+					</form>
+					<button id="phpDownBtn" style="margin-left:180px;" class="btn btn-primary">确定</button>
+				</div>
+				<div id="phpLogDownMsg"></div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$('#datepicker').datepicker({
+        language: "zh-CN",
+        autoclose: true,
+        todayBtn: "linked"
+    });
+	$('#Downdatepicker').datepicker({
+        language: "zh-CN",
+        autoclose: true,
+        todayBtn: "linked"
+    });
+	
+	$(document).ready(function() { $("#s1").select2(); });
+	$(document).ready(function() { $("#s2").select2(); });
+	$(document).ready(function() { $("#s3").select2(); });
+	$(document).ready(function() { $("#s4").select2(); });
+	$("#phpLogCheckBtn").click(function(){
+		$.post("phpChecklogSubmit",$("#phpLogCheckForm").serialize(),function(data){
+			$("#phpLogCheckMsg").empty().html("<textarea class='comments'>"+data.result+"</textarea>");
+		});
+	
+	});
+	
+	$("#phpDownBtn").click(function(){
+		$.post("phpDownlogSubmit",$("#phpDownForm").serialize(),function(data){
+			if(data.code=="1"){
+				$("#phpLogDownMsg").empty().html('<div class="alert alert-error">'+data.result+'打包文件失败</div>');
+			}else{
+				$("#phpLogDownMsg").empty().html('<a href='+data.result+'>点击下载</a>');
+			};
+		});
+	
+	});
+	
+	
+	$("#addphplogpathBtn").click(function() {
+		$.get("/addphplogpath", function(data) {
+			$("#myModal").html(data);
+			$('#myModal').modal({
+				backdrop : 'static'
+			});
+		});
+	});
+</script>
+
+</html>

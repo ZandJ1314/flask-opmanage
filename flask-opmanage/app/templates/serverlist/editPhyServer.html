@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script>
+	$(document).ready(function() { $("#s1").select2(); });
+    $('.input-append.date').datepicker({
+        	language: "zh-CN",
+        	autoclose: true,
+        	todayBtn: "linked"
+        });
+    $('.input-append.date').datepicker("setDate",new Date);
+	$("#save").click(function(){
+		$.post("editServer",$("#serverForm").serialize(),function(data){
+			if(data.result == "true"){
+				$('#myModal').modal('hide');
+				window.location.reload();
+				oTable.fnPageChange( 'first' );
+			}else{
+				var errors = {
+					fieldErrors:data.fieldErrors,
+					errors:data.actionErrors
+				};
+				bootstrapValidation($("#serverForm"),errors);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>新增服务器</h3>
+    </div>
+    <div class="modal-body">
+	<form id="serverForm" enctype="multipart/form-data"  class="form-horizontal">
+                		<input type="hidden" name="server.id" value="{{ editServer['id'] }}" />
+                		<input  name="server.createTime" type="hidden" />
+		
+		<div class="control-group ">
+                	<label class="control-label">内网IP:</label>
+                	<div class="controls">
+                		<input type="text" name="server.localIp" value="{{ editServer['lip'] }}" />
+					</div>
+		</div>
+		
+   		 <div class="control-group ">
+                	<label class="control-label">电信IP:</label>
+                	<div class="controls">
+                		<input type="text" name="server.serverIp" value="{{ editServer['dip'] }}" />
+					</div>
+		</div>
+		
+		<div class="control-group ">
+                	<label class="control-label">联通IP:</label>
+                	<div class="controls">
+                		<input type="text" name="server.unionIp" value="{{ editServer['cip'] }}" />
+					</div>
+		</div>
+		
+		<div class="control-group ">
+                	<label class="control-label">机房:</label>
+                	<div class="controls">
+						<input type="text" name="server.serverRoom" value="{{ editServer['room'] }}" />
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">备注:</label>
+                	<div class="controls">
+						<input type="text" name="server.description" value="{{ editServer['desc'] }}" />
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">CPU:</label>
+                	<div class="controls">
+						<input type="text" name="server.cpu" value="{{ editServer['cpu'] }}" />
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">内存:</label>
+                	<div class="controls">
+						<input type="text" name="server.mem" value="{{ editServer['mem'] }}" />
+					</div>
+		</div>
+		<div class="control-group ">
+                	<label class="control-label">硬盘:</label>
+                	<div class="controls">
+						<input type="text" name="server.hd" value="{{ editServer['hd'] }}" />
+					</div>
+		</div>
+		</form>
+		</div>
+    <div class="modal-footer">
+    <a href="javascript:void(0);" id="save" class="btn btn-primary">提交</a>
+    <a href="javascript:void(0);" class="btn" data-dismiss="modal">关闭</a>
+    </div>
+</body>
+</html>

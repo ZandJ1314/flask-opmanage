@@ -1,0 +1,358 @@
+2018-01-02 14:03:43,788 level-ERROR    Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/BxcqMloms/app/main/views.py", line 29, in login
+    user = User.query.filter_by(username=requestUsername).first()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2659, in first
+    ret = list(self[0:1])
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2457, in __getitem__
+    return list(res)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2761, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2774, in _execute_and_instances
+    close_with_result=True)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2765, in _connection_from_session
+    **kw)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 893, in connection
+    execution_options=execution_options)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 898, in _connection_for_bind
+    engine, execution_options)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 334, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib64/python2.6/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib64/python2.6/site-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1049, "Unknown database 'bxcq yw'")
+2018-01-02 14:06:34,221 level-ERROR    {"result": "flase", "platformList": []}
+2018-01-02 14:07:57,562 level-ERROR    {"result": "flase", "platformList": []}
+2018-01-02 14:15:26,173 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-01-02 14:15:26,313 level-ERROR    {"result": "flase", "platformList": []}
+2018-01-02 14:15:26,313 level-ERROR    Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/BxcqMloms/app/main/views.py", line 48, in login
+    loadztree.LoadyxZtree()
+  File "/data/BxcqMloms/app/mylibs/loadztree.py", line 15, in LoadyxZtree
+    AllAgent = json.loads(cache.get('all_plats'))
+  File "/usr/lib64/python2.6/json/__init__.py", line 307, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.6/json/decoder.py", line 319, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2018-01-02 14:15:49,156 level-ERROR    {"result": "flase", "platformList": []}
+2018-01-02 14:17:01,231 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 43, in getagent
+    platform_configid = platformList[i]['configId']
+KeyError: 'configId'
+
+2018-01-02 14:28:44,200 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 43, in getagent
+    platform_configid = platformList[i]['configId']
+KeyError: 'configId'
+
+2018-01-02 14:28:51,197 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 43, in getagent
+    platform_configid = platformList[i]['configId']
+KeyError: 'configId'
+
+2018-01-02 14:29:44,127 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 43, in getagent
+    platform_configid = platformList[i]['configId']
+KeyError: 'configId'
+
+2018-01-02 14:30:31,370 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 43, in getagent
+    platform_configid = platformList[i]['configId']
+KeyError: 'configId'
+
+2018-01-02 14:39:19,615 level-ERROR    Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/BxcqMloms/app/main/views.py", line 29, in login
+    user = User.query.filter_by(username=requestUsername).first()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2659, in first
+    ret = list(self[0:1])
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2457, in __getitem__
+    return list(res)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2761, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2774, in _execute_and_instances
+    close_with_result=True)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/query.py", line 2765, in _connection_from_session
+    **kw)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 893, in connection
+    execution_options=execution_options)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 898, in _connection_for_bind
+    engine, execution_options)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/orm/session.py", line 334, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/base.py", line 2039, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/base.py", line 2078, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/base.py", line 1405, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/base.py", line 2074, in _wrap_pool_connect
+    return fn()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 376, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 713, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 480, in checkout
+    rec = pool._do_get()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 1060, in _do_get
+    self._dec_overflow()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 1057, in _do_get
+    return self._create_connection()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 323, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 449, in __init__
+    self.connection = self.__connect()
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/pool.py", line 607, in __connect
+    connection = self.__pool._invoke_creator(self)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/strategies.py", line 97, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/lib/python2.6/site-packages/sqlalchemy/engine/default.py", line 385, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib64/python2.6/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib64/python2.6/site-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (_mysql_exceptions.OperationalError) (1049, "Unknown database 'bxcq yw'")
+2018-01-02 14:40:12,129 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-01-02 14:40:12,294 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}]
+2018-01-02 14:40:43,943 level-ERROR    Exception on /checkState [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 486, in checkState
+    checkResultJson = json.loads(checkResult)
+  File "/usr/lib/python2.6/site-packages/flask/json.py", line 146, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/lib64/python2.6/json/__init__.py", line 318, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib64/python2.6/json/decoder.py", line 319, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib64/python2.6/json/decoder.py", line 338, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-01-02 14:42:51,413 level-ERROR    Exception on /checkState [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 486, in checkState
+    checkResultJson = json.loads(checkResult)
+  File "/usr/lib/python2.6/site-packages/flask/json.py", line 146, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/lib64/python2.6/json/__init__.py", line 318, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib64/python2.6/json/decoder.py", line 319, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib64/python2.6/json/decoder.py", line 338, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-01-02 15:00:43,937 level-ERROR    Exception on /checkState [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 486, in checkState
+    checkResultJson = json.loads(checkResult)
+  File "/usr/lib/python2.6/site-packages/flask/json.py", line 146, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/lib64/python2.6/json/__init__.py", line 318, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib64/python2.6/json/decoder.py", line 319, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib64/python2.6/json/decoder.py", line 338, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-01-02 15:00:49,711 level-ERROR    Exception on /checkState [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 486, in checkState
+    checkResultJson = json.loads(checkResult)
+  File "/usr/lib/python2.6/site-packages/flask/json.py", line 146, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/lib64/python2.6/json/__init__.py", line 318, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib64/python2.6/json/decoder.py", line 319, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib64/python2.6/json/decoder.py", line 338, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-01-02 15:00:52,351 level-ERROR    Exception on /checkState [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 486, in checkState
+    checkResultJson = json.loads(checkResult)
+  File "/usr/lib/python2.6/site-packages/flask/json.py", line 146, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/lib64/python2.6/json/__init__.py", line 318, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib64/python2.6/json/decoder.py", line 319, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib64/python2.6/json/decoder.py", line 338, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2018-01-02 15:05:31,452 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-01-02 15:05:31,584 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}]
+2018-01-02 15:05:31,628 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/getmdsapi.py", line 71, in getallserver
+    resp = urllib2.urlopen(req)
+  File "/usr/lib64/python2.6/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib64/python2.6/urllib2.py", line 391, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.6/urllib2.py", line 409, in _open
+    '_open', req)
+  File "/usr/lib64/python2.6/urllib2.py", line 369, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.6/urllib2.py", line 1190, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.6/urllib2.py", line 1162, in do_open
+    h.request(req.get_method(), req.get_selector(), req.data, headers)
+  File "/usr/lib64/python2.6/httplib.py", line 973, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib64/python2.6/httplib.py", line 1010, in _send_request
+    self.endheaders()
+  File "/usr/lib64/python2.6/httplib.py", line 967, in endheaders
+    self._send_output()
+  File "/usr/lib64/python2.6/httplib.py", line 831, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python2.6/httplib.py", line 790, in send
+    self.connect()
+  File "/usr/lib64/python2.6/httplib.py", line 771, in connect
+    self.timeout)
+  File "/usr/lib64/python2.6/socket.py", line 560, in create_connection
+    sock.connect(sa)
+  File "<string>", line 1, in connect
+KeyboardInterrupt
+
+2018-01-02 15:05:48,069 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-01-02 15:05:48,208 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}]

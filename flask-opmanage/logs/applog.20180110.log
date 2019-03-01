@@ -1,0 +1,77 @@
+2018-01-05 13:45:41,920 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-01-05 13:45:42,142 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}]
+2018-01-05 13:49:37,730 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"14\", \"platformAlias\": \"tencent\", \"isCombined\": \"false\", \"configId\": 2, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"283\", \"serverName\": \"tencent 283\\u670d\", \"serverIp\": \"123.207.45.45\", \"serverOrder\": \"0\", \"serverId\": \"283\", \"platformName\": \"tencent\"}]", "gameId": "27", "systemId": "27", "sign": "061C44A9278143EBCA6F59FAB2CE7096", "time": 1515131377000}
+2018-01-05 13:49:37,930 level-ERROR    insert mds result : {"result":"true"}
+2018-01-05 13:49:37,930 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"14\", \"platformAlias\": \"tencent\", \"isCombined\": \"false\", \"configId\": 2, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"283\", \"serverName\": \"tencent 284\\u670d\", \"serverIp\": \"123.207.45.45\", \"serverOrder\": \"0\", \"serverId\": \"284\", \"platformName\": \"tencent\"}]", "gameId": "27", "systemId": "27", "sign": "061C44A9278143EBCA6F59FAB2CE7096", "time": 1515131377000}
+2018-01-05 13:49:38,071 level-ERROR    insert mds result : {"result":"true"}
+2018-01-05 13:49:38,071 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"14\", \"platformAlias\": \"tencent\", \"isCombined\": \"false\", \"configId\": 2, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"283\", \"serverName\": \"tencent 285\\u670d\", \"serverIp\": \"123.207.45.45\", \"serverOrder\": \"0\", \"serverId\": \"285\", \"platformName\": \"tencent\"}]", "gameId": "27", "systemId": "27", "sign": "B1AD5AF9ECEEC69987B8B98BEEDA6A9F", "time": 1515131378000}
+2018-01-05 13:49:38,214 level-ERROR    insert mds result : {"result":"true"}
+2018-01-05 13:49:38,215 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"14\", \"platformAlias\": \"tencent\", \"isCombined\": \"false\", \"configId\": 2, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"283\", \"serverName\": \"tencent 286\\u670d\", \"serverIp\": \"123.207.45.45\", \"serverOrder\": \"0\", \"serverId\": \"286\", \"platformName\": \"tencent\"}]", "gameId": "27", "systemId": "27", "sign": "B1AD5AF9ECEEC69987B8B98BEEDA6A9F", "time": 1515131378000}
+2018-01-05 13:49:38,358 level-ERROR    insert mds result : {"result":"true"}
+2018-01-05 13:49:38,359 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"14\", \"platformAlias\": \"tencent\", \"isCombined\": \"false\", \"configId\": 2, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"283\", \"serverName\": \"tencent 287\\u670d\", \"serverIp\": \"123.207.45.45\", \"serverOrder\": \"0\", \"serverId\": \"287\", \"platformName\": \"tencent\"}]", "gameId": "27", "systemId": "27", "sign": "B1AD5AF9ECEEC69987B8B98BEEDA6A9F", "time": 1515131378000}
+2018-01-05 13:49:38,490 level-ERROR    insert mds result : {"result":"true"}
+2018-01-05 13:49:38,490 level-ERROR    {"serverListStr": "[{\"gameId\": 27, \"platformId\": \"14\", \"platformAlias\": \"tencent\", \"isCombined\": \"false\", \"configId\": 2, \"sumzone\": 3, \"unicomIp\": \"\", \"isDeleted\": \"false\", \"gameAlias\": \"bxcq\", \"iszone\": \"283\", \"serverName\": \"tencent 288\\u670d\", \"serverIp\": \"123.207.45.45\", \"serverOrder\": \"0\", \"serverId\": \"288\", \"platformName\": \"tencent\"}]", "gameId": "27", "systemId": "27", "sign": "B1AD5AF9ECEEC69987B8B98BEEDA6A9F", "time": 1515131378000}
+2018-01-05 13:49:38,613 level-ERROR    insert mds result : {"result":"true"}
+2018-01-05 13:54:06,508 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-01-05 13:54:06,790 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}]
+2018-01-05 13:54:52,409 level-ERROR    Exception on /javaUpdate [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 214, in javaUpdate
+    {"serverIp": AllServerInfoDict[plat_id]['serverIp'], "javaDir": AllServerInfoDict[plat_id]['javaDir'],
+KeyError: 'javaDir'
+2018-01-05 13:55:10,161 level-ERROR    Exception on /javaUpdate [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 214, in javaUpdate
+    {"serverIp": AllServerInfoDict[plat_id]['serverIp'], "javaDir": AllServerInfoDict[plat_id]['javaDir'],
+KeyError: 'javaDir'
+2018-01-05 13:55:31,218 level-ERROR    Exception on /javaUpdate [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 8, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/ywtools/views.py", line 214, in javaUpdate
+    {"serverIp": AllServerInfoDict[plat_id]['serverIp'], "javaDir": AllServerInfoDict[plat_id]['javaDir'],
+KeyError: 'javaDir'
+2018-01-05 13:55:58,496 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-01-05 13:55:58,640 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}]
+2018-01-05 15:19:43,828 level-ERROR    zhengtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2018-01-05 15:19:44,041 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}]

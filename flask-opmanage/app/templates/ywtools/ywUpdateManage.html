@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../static/js/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/js/layout/layout-default-latest.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../static/js/select2/select2.css">
+    <link rel="stylesheet" href="../static/js/datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="../static/js/chart/morris.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/webuploader.css">
+    <script src="../static/js/jquery-1.8.3.min.js"></script>
+    <script src="../static/js/jquery.dataTables.min.js"></script>
+    <script src="../static/js/bootstrap/js/bootstrap.js"></script>
+    <script src="../static/js/layout/jquery-ui-latest.js"></script>
+    <script src="../static/js/layout/jquery.layout-latest.js"></script>
+    <script src="../static/js/my-common.js"></script>
+    <script src="../static/js/select2/select2.min.js"></script>
+    <script src="../static/js/datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../static/js/datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+    <script src="../static/js/chart/raphael-min.js"></script>
+    <script src="../static/js/chart/morris.min.js"></script>
+    <script src="../static/js/webuploader.js"></script>
+    <script src="../static/js/webuploader.min.js"></script>
+    <script charset="utf-8" src="../static/js/fileupload.js"></script>
+    <title>Insert title here</title>
+</head>
+<body>
+<div class="ui-layout-west">
+    {% include "ywtools/operServerList.html" %}
+</div>
+<div class="ui-layout-center">
+    <div class="tabs-custom">
+        <ul class="nav nav-tabs">
+            {% if "update_gamedata" in AllInfo['permissionList'] %}
+            <li class="">
+                <!-- a data-toggle="tab" href="#gameDataUpdate">game_data更新</a-->
+                <a data-toggle="tab" href="#javascriptUpdate">game_data更新</a>
+            </li>
+            {% endif %}
+
+            {% if "update_java" in AllInfo['permissionList'] %}
+            <li class="">
+                <a data-toggle="tab" href="#javaUpdate">java版本更新</a>
+            </li>
+            {% endif %}
+
+            {% if "update_javascripts" in AllInfo['permissionList'] %}
+            <li class="">
+                <a data-toggle="tab" href="#javascriptUpdate">java脚本更新</a>
+            </li>
+            {% endif %}
+
+            {% if "update_front" in AllInfo['permissionList'] %}
+            <li class="">
+                <a data-toggle="tab" href="#frontUpdate">前端版本更新</a>
+            </li>
+            {% endif %}
+
+            {% if "update_php" in AllInfo['permissionList'] %}
+            <li class="">
+                <a data-toggle="tab" href="#phpUpdate">PHP更新</a>
+            </li>
+            {% endif %}
+
+            {% if "bootgame" in AllInfo['permissionList'] %}
+            <li class="">
+                <a data-toggle="tab" href="#bootGame">启动游戏</a>
+            </li>
+            {% endif %}
+
+            {% if "checkserverstat" in AllInfo['permissionList'] %}
+            <li class="">
+                <a data-toggle="tab" href="#checkState">状态检查</a>
+            </li>
+            {% endif %}
+
+            {% if "update_planres" in AllInfo['permissionList'] %}
+            <li class="">
+                <a data-toggle="tab" href="#planResUpdate">策划RES更新</a>
+            </li>
+            {% endif %}
+
+            <li class="active">
+                <a data-toggle="tab" href="#history">执行记录</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            {% if "update_gamedata" in AllInfo['permissionList'] %}
+            <div id="gameDataUpdate" class="tab-pane fade">
+                <div class="well">
+                    <form id="gameDataUpdateForm" enctype="multipart/form-data" class="form-horizontal">
+                        {% if "displayresetversion" in AllInfo['permissionList'] %}
+                        <div class="control-group ">
+                            <label class="control-label">重置版本:</label>
+                            <div class="controls">
+                                <select id="s1" name="isReset">
+                                    <option value="0">否</option>
+                                    <option value="1">是</option>
+                                </select>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="control-group" style="visibility:hidden">
+                            <label class="control-label">重置版本:</label>
+                            <div class="controls">
+                                <select id="s1" name="isReset">
+                                    <option value="0">否</option>
+                                </select>
+                            </div>
+                        </div>
+                        {% endif %}
+                        <div class="control-group ">
+                            <label class="control-label">请选择表:</label>
+                            <div class="controls">
+                                <a id='selectTables' class='btn'>请选择表</a>
+                                <div id="tableList" style="width:500px"></div>
+                                <input type="text" style="display:none" name="dbtext" id="dbtext"/>
+                                <input type="text" style="display:none" name="tablestext" id="tablestext"/>
+                            </div>
+                        </div>
+
+
+                    </form>
+
+
+                    <button id="gameDataUpdateBtn" style="margin-left:150px;" class="btn btn-primary">更新</button>
+                </div>
+                <div id="gameDataMsg"></div>
+                <div class="row-fluid">
+                    <div id="gameDataFail" class="span4">
+                    </div>
+                    <div id="gameDataSuccess" class="span4">
+                    </div>
+                    <div id="gameDataUnknow" class="span4">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if "update_java" in AllInfo['permissionList'] %}
+            <div id="javaUpdate" class="tab-pane fade">
+                <div class="well">
+                    <form id="javaUpdateForm" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="control-group ">
+                            <label class="control-label">SVN路径:</label>
+                            <div class="controls">
+                                <input type="text" name="version">
+                            </div>
+                        </div>
+                    </form>
+                    <button id="javaUpdateBtn" style="margin-left:180px;" class="btn btn-primary">更新</button>
+                </div>
+                <div id="javaUpdateMsg"></div>
+                <div class="row-fluid">
+                    <div id="javaUpdateFail" class="span4">
+                    </div>
+                    <div id="javaUpdateSuccess" class="span4">
+                    </div>
+                    <div id="javaUpdateUnknow" class="span4">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if "update_javascripts" in AllInfo['permissionList'] %}
+            <div id="javascriptUpdate" class="tab-pane fade">
+                <div class="well">
+                    <form id="javascriptUpdateForm" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="control-group ">
+                            <label class="control-label">SVN路径:</label>
+                            <div class="controls">
+                                <input type="text" name="version">
+                            </div>
+                        </div>
+                    </form>
+                    <button id="javascriptUpdateBtn" style="margin-left:180px;" class="btn btn-primary">更新</button>
+                </div>
+                <div id="javascriptUpdateMsg"></div>
+                <div class="row-fluid">
+                    <div id="javascriptUpdateFail" class="span4">
+                    </div>
+                    <div id="javascriptUpdateSuccess" class="span4">
+                    </div>
+                    <div id="javascriptUpdateUnknow" class="span4">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if "update_front" in AllInfo['permissionList'] %}
+            <div id="frontUpdate" class="tab-pane fade">
+                <div class="well">
+                    <form id="frontUpdateForm" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="control-group ">
+                            <label class="control-label">client_gameclient版本号:</label>
+                            <div class="controls">
+                                <input type="text" name="client_gameclient">
+                            </div>
+                        </div>
+
+                        <div class="control-group ">
+                            <label class="control-label">pro版本号:</label>
+                            <div class="controls">
+                                <input type="text" name="pro">
+                            </div>
+                        </div>
+                        <div class="control-group ">
+                            <label class="control-label">gif_mainUI版本号:</label>
+                            <div class="controls">
+                                <input type="text" name="gif_mainUI">
+                            </div>
+                        </div>
+                        <div class="control-group ">
+                            <label class="control-label">gif_clientCfg版本号:</label>
+                            <div class="controls">
+                                <input type="text" name="gif_clientCfg">
+                            </div>
+                        </div>
+                        <div class="control-group ">
+                            <label class="control-label">res版本号:</label>
+                            <div class="controls">
+                                <input type="text" name="res">
+                            </div>
+                        </div>
+                        <div class="control-group ">
+                            <label class="control-label">client_gamelogin版本号:</label>
+                            <div class="controls">
+                                <input type="text" name="client_gamelogin">
+                            </div>
+                        </div>
+                        <div class="control-group ">
+                            <label class="control-label">client_gameload版本号:</label>
+                            <div class="controls">
+                                <input type="text" name="client_gameload">
+                            </div>
+                        </div>
+                    </form>
+                    <button id="frontUpdateBtn" style="margin-left:180px;" class="btn btn-primary">更新</button>
+                </div>
+                <div id="frontUpdateMsg"></div>
+                <div class="row-fluid">
+                    <div id="frontUpdateFail" class="span4">
+                    </div>
+                    <div id="frontUpdateSuccess" class="span4">
+                    </div>
+                    <div id="frontUpdateUnknow" class="span4">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if "update_php" in AllInfo['permissionList'] %}
+            <div id="phpUpdate" class="tab-pane fade">
+                <div class="well">
+                    <button id="phpUpdateBtn" style="margin-left:180px;" class="btn btn-primary">更新</button>
+                </div>
+                <div id="phpUpdateMsg"></div>
+                <div class="row-fluid">
+                    <div id="phpUpdateFail" class="span4">
+                    </div>
+                    <div id="phpUpdateSuccess" class="span4">
+                    </div>
+                    <div id="phpUpdateUnknow" class="span4">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if "bootgame" in AllInfo['permissionList'] %}
+            <div id="bootGame" class="tab-pane fade">
+                <div class="well">
+                    <button id="bootGameBtn" style="margin-left:180px;" class="btn btn-primary">启动</button>
+                </div>
+                <div id="bootmsg">
+                </div>
+
+            </div>
+            {% endif %}
+
+            {% if "checkserverstat" in AllInfo['permissionList'] %}
+            <div id="checkState" class="tab-pane fade">
+                <div class="well">
+                    <form id="checkStateForm" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="control-group ">
+                            <label class="control-label">类型:</label>
+                            <div class="controls">
+                                <select id="s1" name="version">
+                                    <option value="start">启动检查</option>
+                                    <option value="close">关闭检查</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <button id="checkStateBtn" style="margin-left:180px;" class="btn btn-primary">更新</button>
+                </div>
+                <div class="row-fluid">
+                    <div id="checkStateFail" class="span6">
+                    </div>
+                    <div id="checkStateSuccess" class="span6">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if "update_planres" in AllInfo['permissionList'] %}
+            <div id="planResUpdate" class="tab-pane fade">
+
+                <div class="well">
+                    <input type="text" style="display:none" name="totalFile" id="totalFile"/>
+                    <input type="text" style="display:none" name="fileMd5" id="fileMd5"/>
+                    <input type="text" style="display:none" name="isupload" id="isupload"/>
+                    <div id="Resuploader" class="wu-example">
+                        <!--用来存放文件信息-->
+                        <div id="resthelist" class="uploader-list"></div>
+                        <div class="btns">
+                            <div id="respicker">选择文件</div>
+                            <button id="resctlBtn" class="btn btn-default">开始上传</button>
+                        </div>
+                    </div>
+
+                    <button id="planResBtn" style="margin-left:180px;" class="btn btn-primary">确定</button>
+                </div>
+                <div id="planresUpdateMsg"></div>
+                <div class="row-fluid">
+                    <div id="planresUpdateFail" class="span4"></div>
+                    <div id="planresUpdateSuccess" class="span4"></div>
+                    <div id="planresUpdateUnknow" class="span4"></div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div id="history" class="tab-pane fade active in"
+            ">
+            <div class="well">
+                <form id="historyForm" enctype="multipart/form-data" class="form-horizontal">
+                    <div class="control-group ">
+                        <label class="control-label">日期:</label>
+                        <div class="controls">
+                            <div class="input-daterange" id="datepicker">
+                                <input type="text" name="start" readonly="readonly" class="input-small"/>
+                                <span class="add-on">to</span>
+                                <input type="text" name="end" readonly="readonly" class="input-small"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <button id="historyQuery" style="margin-left:180px;" class="btn btn-primary">查询</button>
+            </div>
+            <div id="historyTable" style="width:100%"></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal hide fade" id="myModal">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>详细信息</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div id="divfail" class="span4">
+            </div>
+            <div id="divsuccess" class="span4">
+            </div>
+            <div id="divunknow" class="span4">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:void(0);" class="btn" data-dismiss="modal">关闭</a>
+    </div>
+</div>
+<div class="modal hide fade" id="checkModel">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>自定义勾选</h3>
+    </div>
+    <div class="modal-body">
+        <textarea id="checkInfo"></textarea>
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:void(0);" id="customCheckSubmit" class="btn btn-primary">确定</a>
+        <a href="javascript:void(0);" class="btn" data-dismiss="modal">关闭</a>
+    </div>
+</div>
+
+<div class="modal hide fade" id="TablesModal"></div>
+
+
+</body>
+<script>
+    $('.input-daterange').datepicker({
+        language: "zh-CN",
+        autoclose: true,
+        todayBtn: "linked"
+    });
+    $('.input-daterange input').datepicker("setDate", new Date);
+    $(document).ready(function () {
+        $('body').layout({
+            west__size: 300
+        });
+        $(document).ready(function () {
+            $("#s1").select2();
+        });
+        $(document).ready(function () {
+            $("#s2").select2();
+        });
+        $(document).ready(function () {
+            $("#s3").select2();
+        });
+    });
+    $("#selectTables").click(function () {
+        $.get("/selectTables", function (data) {
+            $("#TablesModal").html(data);
+            $('#TablesModal').modal({
+                backdrop: 'static'
+            });
+        });
+    });
+
+    $("#selectTableSave").die().live("click", function () {
+        var checked = $.fn.zTree.getZTreeObj("MysqlTree").getCheckedNodes(true);
+        var tables = new Array();
+        var totalDB = 0;
+        var totalTables = 0;
+        var tablesName = "";
+        var db_alltables = 0;
+        for (var i = 0; i < checked.length; i++) {
+            if (checked[i].type == "db") {
+                totalDB = totalDB + 1;
+                db_alltables = checked[i].tablesTotal
+            } else if (checked[i].type == "table") {
+                if (i == checked.length - 1) {
+                    tablesName = tablesName + checked[i].name
+                    totalTables = totalTables + 1;
+                } else {
+                    tablesName = tablesName + checked[i].name + ",";
+                    totalTables = totalTables + 1;
+                }
+                var dbName = checked[i].dbName;
+            }
+        }
+        if (totalDB > 1) {
+            alert("不能同时选择多个库");
+        } else {
+            if (totalTables > 0 && db_alltables == totalTables) {
+                tablesName = "all"
+            }
+            tables.push({"tableName": tablesName, "dbName": dbName});
+            $("#dbtext").val(dbName);
+            $("#tablestext").val(tablesName);
+            var title = ["数据库", "表名"];
+            var colnum = ["dbName", "tableName"];
+            var selctDbTables = createSelectTable(tables, title, colnum);
+            $("#tableList").html(selctDbTables);
+            $('#TablesModal').modal('hide');
+        }
+    });
+
+    $("#GameDataActionAgain").live("click", function () {
+        $.post("actionAgainUpdate?sign=" + $("#GameDataActionAgain").val(), function (data) {
+            if (data.result == "true") {
+                $("#gameDataMsg").empty().html("<div class='alert alert-info'>" + data.msg + "<button style='margin-left:20px' value='" + data.sign + "' id='gameDataResult' class='btn btn-primary'>查看结果</button></div>");
+            } else if (data.result == "serversnull") {
+                bootstrapAlert("全部成功，无须再执行");
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+
+
+    $("#gameDataUpdateBtn").click(function () {
+        var servers = selectedServers();
+        var tablestext = $('#tablestext').val();
+        if (servers.length == 0) {
+            bootstrapAlert("请选择区服");
+        } else {
+            if (tablestext == "") {
+                bootstrapAlert("请选择表");
+            } else {
+                var serParm = "";
+                for (var i = 0; i < servers.length; i++) {
+                    if (i == servers.length - 1) {
+                        serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"}';
+                    } else {
+                        serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"},';
+                    }
+                }
+                serParm = "&serverinfo=[" + serParm + "]";
+                function callback() {
+                    $.post("gameDataUpdate", $("#gameDataUpdateForm").serialize() + serParm, function (data) {
+                        if (data.result == "true") {
+                            $("#gameDataMsg").empty().html("<div class='alert alert-info'>" + data.msg + "<button style='margin-left:20px' value='" + data.sign + "' id='gameDataResult' class='btn btn-primary'>查看结果</button></div>");
+                        } else {
+                            bootstrapAlert("错误");
+                        }
+                    });
+                }
+
+                bootstrapConfirm("确认更新", callback);
+            }
+        }
+    });
+    $("#gameDataResult").live("click", function () {
+        $.post("queryResult?sign=" + $("#gameDataResult").val(), function (data) {
+            if (data.result == "true") {
+                var success = data.resultMap.success;
+                var fail = data.resultMap.fail;
+                var unknow = data.resultMap.unknow;
+                var title = ["平台", "区服", "返回值"];
+                var colnum = ["platformAlias", "serverId", "resultString"];
+                var successTable = createTable(success, title, colnum);
+                var failTable = createTable(fail, title, colnum);
+                var unknowTable = createTable(unknow, title, colnum);
+                var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>" + successTable + "</div>";
+                if (fail.length == 0) {
+                    var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>" + failTable + "</div>";
+                } else {
+                    var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><button value='" + $("#gameDataResult").val() + "' id='GameDataActionAgain' class='btn btn-success' style='margin:0 10px 10px'>再次执行</button><div id='failTable'>" + failTable + "</div>";
+                }
+                var unknowDiv = "<button id='unknowList' class='btn' style='margin-bottom:10px'>未返回列表</button><div id='unknowTable'>" + unknowTable + "</div>";
+                $("#gameDataSuccess").empty().html(successDiv);
+                $("#gameDataFail").empty().html(failDiv);
+                $("#gameDataUnknow").empty().html(unknowDiv);
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+    $("#javaUpdateBtn").click(function () {
+        var servers = selectedServers();
+        if (servers.length == 0) {
+            bootstrapAlert("请选择区服");
+        } else {
+            var serParm = "";
+            for (var i = 0; i < servers.length; i++) {
+                if (i == servers.length - 1) {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"}';
+                } else {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"},';
+                }
+            }
+            serParm = "&serverinfo=[" + serParm + "]";
+            function callback() {
+                $.post("javaUpdate", $("#javaUpdateForm").serialize() + serParm, function (data) {
+                    if (data.result == "true") {
+                        $("#javaUpdateMsg").empty().html("<div class='alert alert-info'>" + data.msg + "<button style='margin-left:20px' value='" + data.sign + "' id='javaUpdateResult' class='btn btn-primary'>查看结果</button></div>");
+                    } else {
+                        bootstrapAlert("错误");
+                    }
+                });
+            }
+
+            if ($("#javaUpdateForm").find("input[name=version]").val() == "") {
+                bootstrapAlert("SVN路径不能为空");
+            } else {
+                bootstrapConfirm("确认更新SVN路径为<p class='text-error'>" + $("#javaUpdateForm").find("input[name=version]").val() + "</p>的版本？", callback);
+            }
+        }
+    });
+    $("#javaUpdateResult").live("click", function () {
+        $.post("queryResult?sign=" + $("#javaUpdateResult").val(), function (data) {
+            if (data.result == "true") {
+                var success = data.resultMap.success;
+                var fail = data.resultMap.fail;
+                var unknow = data.resultMap.unknow;
+                var title = ["平台", "区服", "返回值"];
+                var colnum = ["platformAlias", "serverId", "resultString"];
+                var successTable = createTable(success, title, colnum);
+                var failTable = createTable(fail, title, colnum);
+                var unknowTable = createTable(unknow, title, colnum);
+                var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>" + successTable + "</div>";
+                var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>" + failTable + "</div>";
+                var unknowDiv = "<button id='unknowList' class='btn' style='margin-bottom:10px'>未返回列表</button><div id='unknowTable'>" + unknowTable + "</div>";
+                $("#javaUpdateSuccess").empty().html(successDiv);
+                $("#javaUpdateFail").empty().html(failDiv);
+                $("#javaUpdateUnknow").empty().html(unknowDiv);
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+    $("#javascriptUpdateBtn").click(function () {
+        var servers = selectedServers();
+        if (servers.length == 0) {
+            bootstrapAlert("请选择区服");
+        } else {
+            var serParm = "";
+            for (var i = 0; i < servers.length; i++) {
+                if (i == servers.length - 1) {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"}';
+                } else {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"},';
+                }
+            }
+            serParm = "&serverinfo=[" + serParm + "]";
+            function callback() {
+                $.post("javascriptUpdate", $("#javascriptUpdateForm").serialize() + serParm, function (data) {
+                    if (data.result == "true") {
+                        $("#javascriptUpdateMsg").empty().html("<div class='alert alert-info'>" + data.msg + "<button style='margin-left:20px' value='" + data.sign + "' id='javascriptUpdateResult' class='btn btn-primary'>查看结果</button></div>");
+                    } else {
+                        bootstrapAlert("错误");
+                    }
+                });
+            }
+
+            if ($("#javascriptUpdateForm").find("input[name=version]").val() == "") {
+                bootstrapAlert("SVN路径不能为空");
+            } else {
+                bootstrapConfirm("确认更新SVN路径为<p class='text-error'>" + $("#javascriptUpdateForm").find("input[name=version]").val() + "</p>的版本？", callback);
+            }
+        }
+    });
+    $("#javascriptUpdateResult").live("click", function () {
+        $.post("queryResult?sign=" + $("#javascriptUpdateResult").val(), function (data) {
+            if (data.result == "true") {
+                var success = data.resultMap.success;
+                var fail = data.resultMap.fail;
+                var unknow = data.resultMap.unknow;
+                var title = ["平台", "区服", "返回值"];
+                var colnum = ["platformAlias", "serverId", "resultString"];
+                var successTable = createTable(success, title, colnum);
+                var failTable = createTable(fail, title, colnum);
+                var unknowTable = createTable(unknow, title, colnum);
+                var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>" + successTable + "</div>";
+                var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>" + failTable + "</div>";
+                var unknowDiv = "<button id='unknowList' class='btn' style='margin-bottom:10px'>未返回列表</button><div id='unknowTable'>" + unknowTable + "</div>";
+                $("#javascriptUpdateSuccess").empty().html(successDiv);
+                $("#javascriptUpdateFail").empty().html(failDiv);
+                $("#javascriptUpdateUnknow").empty().html(unknowDiv);
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+    $("#frontUpdateBtn").click(function () {
+        var servers = selectedServers();
+        if (servers.length == 0) {
+            bootstrapAlert("请选择区服");
+        } else {
+            var serParm = "";
+            for (var i = 0; i < servers.length; i++) {
+                if (i == servers.length - 1) {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"}';
+                } else {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"},';
+                }
+            }
+            serParm = "&serverinfo=[" + serParm + "]";
+            function callback() {
+                $.post("frontUpdate", $("#frontUpdateForm").serialize() + serParm, function (data) {
+                    if (data.result == "true") {
+                        $("#frontUpdateMsg").empty().html("<div class='alert alert-info'>" + data.msg + "<button style='margin-left:20px' value='" + data.sign + "' id='frontUpdateResult' class='btn btn-primary'>查看结果</button></div>");
+                    } else {
+                        bootstrapAlert("错误");
+                    }
+                });
+            }
+
+            bootstrapConfirm("确认更新？", callback);
+        }
+    });
+    $("#frontUpdateResult").live("click", function () {
+        $.post("queryResult?sign=" + $("#frontUpdateResult").val(), function (data) {
+            if (data.result == "true") {
+                var success = data.resultMap.success;
+                var fail = data.resultMap.fail;
+                var unknow = data.resultMap.unknow;
+                var title = ["平台", "区服", "返回值"];
+                var colnum = ["platformAlias", "serverId", "resultString"];
+                var successTable = createTable(success, title, colnum);
+                var failTable = createTable(fail, title, colnum);
+                var unknowTable = createTable(unknow, title, colnum);
+                var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>" + successTable + "</div>";
+                var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>" + failTable + "</div>";
+                var unknowDiv = "<button id='unknowList' class='btn' style='margin-bottom:10px'>未返回列表</button><div id='unknowTable'>" + unknowTable + "</div>";
+                $("#frontUpdateSuccess").empty().html(successDiv);
+                $("#frontUpdateFail").empty().html(failDiv);
+                $("#frontUpdateUnknow").empty().html(unknowDiv);
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+
+    $("#phpUpdateBtn").click(function () {
+        var servers = selectedServers();
+        if (servers.length == 0) {
+            bootstrapAlert("请选择区服");
+        } else {
+            var serParm = "";
+            for (var i = 0; i < servers.length; i++) {
+                if (i == servers.length - 1) {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"}';
+                } else {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"},';
+                }
+            }
+            serParm = "&serverinfo=[" + serParm + "]";
+            function callback() {
+                $.post("phpUpdate", $("#phpUpdateForm").serialize() + serParm, function (data) {
+                    if (data.result == "true") {
+                        $("#phpUpdateMsg").empty().html("<div class='alert alert-info'>" + data.msg + "<button style='margin-left:20px' value='" + data.sign + "' id='phpUpdateResult' class='btn btn-primary'>查看结果</button></div>");
+                    } else {
+                        bootstrapAlert("错误");
+                    }
+                });
+            }
+
+            bootstrapConfirm("确认更新？", callback);
+        }
+    });
+    $("#phpUpdateResult").live("click", function () {
+        $.post("queryResult?sign=" + $("#phpUpdateResult").val(), function (data) {
+            if (data.result == "true") {
+                var success = data.resultMap.success;
+                var fail = data.resultMap.fail;
+                var unknow = data.resultMap.unknow;
+                var title = ["平台", "区服", "返回值"];
+                var colnum = ["platformAlias", "serverId", "resultString"];
+                var successTable = createTable(success, title, colnum);
+                var failTable = createTable(fail, title, colnum);
+                var unknowTable = createTable(unknow, title, colnum);
+                var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>" + successTable + "</div>";
+                var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>" + failTable + "</div>";
+                var unknowDiv = "<button id='unknowList' class='btn' style='margin-bottom:10px'>未返回列表</button><div id='unknowTable'>" + unknowTable + "</div>";
+                $("#phpUpdateSuccess").empty().html(successDiv);
+                $("#phpUpdateFail").empty().html(failDiv);
+                $("#phpUpdateUnknow").empty().html(unknowDiv);
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+    $("#historyQuery").live("click", function () {
+        $.post("historyQuery", $("#historyForm").serialize(), function (data) {
+            if (data.result == "true") {
+                var title = ["ID", "用户", "时间", "游戏", "命令", "成功", "失败", "未返回", "操作"];
+                var oper = "<button name='detail' class='btn'>查看详细</button>";
+                var colnum = ["batchSign", "user", "time", "gameName", "cmd", "success", "fail", "unknow", {value: oper}];
+                var table = createOperationalTable(data.resultList, title, colnum);
+                $("#historyTable").empty().html(table);
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+
+    $("button[name=detail]").live("click", function () {
+        var batchSign = $(this).parent().parent().find("td[name=batchSign]").html();
+        $.post("queryResult?sign=" + batchSign, function (data) {
+            if (data.result == "true") {
+                var success = data.resultMap.success;
+                var fail = data.resultMap.fail;
+                var unknow = data.resultMap.unknow;
+                var title = ["平台", "区服", "返回值"];
+                var colnum = ["platformAlias", "serverId", "resultString"];
+                var successTable = createTable(success, title, colnum);
+                var failTable = createTable(fail, title, colnum);
+                var unknowTable = createTable(unknow, title, colnum);
+                var successDiv = "<button id='' class='btn' style='margin-bottom:10px'>成功列表</button><div id=''>" + successTable + "</div>";
+                var failDiv = "<button id='' class='btn' style='margin-bottom:10px'>失败列表</button><div id=''>" + failTable + "</div>";
+                var unknowDiv = "<button id='' class='btn' style='margin-bottom:10px'>未返回列表</button><div id=''>" + unknowTable + "</div>";
+                $("#divsuccess").empty().html(successDiv);
+                $("#divfail").empty().html(failDiv);
+                $("#divunknow").empty().html(unknowDiv);
+                $('#myModal').modal({
+                    backdrop: 'static'
+                });
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+
+    $("#bootGameBtn").click(function () {
+        var servers = selectedServers();
+        if (servers.length == 0) {
+            bootstrapAlert("请选择区服");
+        } else {
+            var serParm = "";
+            for (var i = 0; i < servers.length; i++) {
+                if (i == servers.length - 1) {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"}';
+                } else {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"},';
+                }
+            }
+            serParm = "&serverinfo=[" + serParm + "]";
+            function callback() {
+                $.post("bootGame", serParm, function (data) {
+                    if (data.result == "true") {
+                        $("#bootmsg").empty().html("<div class='alert alert-info'>执行成功</div>");
+                    } else {
+                        bootstrapAlert("错误");
+                    }
+                });
+            }
+
+            bootstrapConfirm("确认启动？", callback);
+        }
+    });
+
+    $("#checkStateBtn").click(function () {
+        var servers = selectedServers();
+        if (servers.length == 0) {
+            bootstrapAlert("请选择区服");
+        } else {
+            var serParm = "";
+            for (var i = 0; i < servers.length; i++) {
+                if (i == servers.length - 1) {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"}';
+                } else {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"},';
+                }
+            }
+            serParm = "&serverinfo=[" + serParm + "]";
+            $.post("checkState", $("#checkStateForm").serialize() + serParm, function (data) {
+                if (data.result == "true") {
+                    var success = data.map.success;
+                    var fail = data.map.fail;
+                    var title = ["平台", "区服", "返回值"];
+                    var colnum = ["platformAlias", "serverId", "codemessage"];
+                    var successTable = createTable(success, title, colnum);
+                    var failTable = createTable(fail, title, colnum);
+                    var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>" + successTable + "</div>";
+                    var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>" + failTable + "</div>";
+                    $("#checkStateSuccess").empty().html(successDiv);
+                    $("#checkStateFail").empty().html(failDiv);
+                } else {
+                    bootstrapAlert("错误");
+                }
+            });
+        }
+    });
+
+    $("#planResBtn").click(function () {
+        var fileMd5 = $('#fileMd5').val();
+        var servers = selectedServers();
+        if (servers.length == 0) {
+            bootstrapAlert("请选择区服");
+        } else {
+            var serParm = "";
+            for (var i = 0; i < servers.length; i++) {
+                if (i == servers.length - 1) {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"}';
+                } else {
+                    serParm += '{"zone":"' + servers[i].serverId + '","agent":"' + servers[i].platformAlias + '"},';
+                }
+            }
+            serParm = "[" + serParm + "]"
+            function callback() {
+                $.post("planResUpdate", {"serverinfo": serParm, "fileMd5": fileMd5}, function (data) {
+                    if (data.result == "true") {
+                        $("#planresUpdateMsg").empty().html("<div class='alert alert-info'>" + data.msg + "<button style='margin-left:20px' value='" + data.sign + "' id='planresUpdateResult' class='btn btn-primary'>查看结果</button></div>");
+                    } else {
+                        bootstrapAlert("错误");
+                    }
+                });
+            }
+
+            var isupload = $('#isupload').val();
+            if (isupload == "yes") {
+                bootstrapConfirm("确认执行？", callback);
+            } else {
+                bootstrapAlert("请先上传res文件");
+            }
+        }
+    });
+
+    $("#planresUpdateResult").live("click", function () {
+        $.post("queryResult?sign=" + $("#planresUpdateResult").val(), function (data) {
+            if (data.result == "true") {
+                var success = data.resultMap.success;
+                var fail = data.resultMap.fail;
+                var unknow = data.resultMap.unknow;
+                var title = ["平台", "区服", "返回值"];
+                var colnum = ["platformAlias", "serverId", "resultString"];
+                var successTable = createTable(success, title, colnum);
+                var failTable = createTable(fail, title, colnum);
+                var unknowTable = createTable(unknow, title, colnum);
+                var successDiv = "<button id='successList' class='btn' style='margin-bottom:10px'>成功列表</button><div id='successTable'>" + successTable + "</div>";
+                var failDiv = "<button id='failList' class='btn' style='margin-bottom:10px'>失败列表</button><div id='failTable'>" + failTable + "</div>";
+                var unknowDiv = "<button id='unknowList' class='btn' style='margin-bottom:10px'>未返回列表</button><div id='unknowTable'>" + unknowTable + "</div>";
+                $("#planresUpdateSuccess").empty().html(successDiv);
+                $("#planresUpdateFail").empty().html(failDiv);
+                $("#planresUpdateUnknow").empty().html(unknowDiv);
+            } else {
+                bootstrapAlert("错误");
+            }
+        });
+    });
+
+</script>
+</html>

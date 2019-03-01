@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>运维管理平台</title>
+
+<link rel="stylesheet" href="static/js/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="static/css/index.css">
+<link rel="stylesheet" href="static/css/skins/ext.css" id="window-skin">
+</head>
+<style>
+.note{
+	color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+}
+.note_x{
+	color: #BBBBBB;
+    font-size: 12px;
+	text-align: center;
+}
+</style>
+<body>
+<div class="loading"></div>
+<!-- 桌面 -->
+<div id="desktop">
+	<div id="zoom-tip"><div><i>​</i>​<span></span></div><a href="javascript:;" class="close" onClick="HROS.zoom.close();">×</a></div>
+	<div id="desk">
+		<div id="desk-1" class="desktop-container"><div class="scrollbar scrollbar-x"></div><div class="scrollbar scrollbar-y"></div>
+			
+		</div>
+		<div id="desk-2" class="desktop-container"><div class="scrollbar scrollbar-x"></div><div class="scrollbar scrollbar-y"></div>
+			<li type="app" style="top:27px;left:36px" appid="4" id="d_4" width="420" height="240" class="appbtn" title="豆瓣FM" url="http://douban.fm/partner/webqq?fromhoorayos" opening="0"><div><img alt="豆瓣FM" title="豆瓣FM" src="static/image/ui/doubanfm.png"></div><span>豆瓣FM</span></li>
+			<li type="widget" url="static/systemapp/clock/clock.html" height="180" width="170" left="100" appid="5" id="d_5" class="appbtn" opening="0"><div><img alt="时钟" title="时钟" src="static/image/ui/trad.png"></div><span>时钟</span></li>
+		</div>
+		{% if "ywtools" in DataInfo['permissionList'] %}
+		<div id="desk-3" class="desktop-container"><div class="scrollbar scrollbar-x"></div><div class="scrollbar scrollbar-y"></div>
+			{% if "ywupdate" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="31" id="d_31" class="appbtn" title="运维更新" url="/ywUpdateManage" opening="0"><div><img alt="运维更新" title="运维更新" src="static/image/ui/update.png"></div><span>运维更新</span></li>
+			{% endif %}
+			{% if "servermanager" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="32" id="d_32" class="appbtn" title="服务器管理" url="/phyServerManage" opening="0"><div><img alt="服务器管理" title="服务器管理" src="static/image/ui/physerver.png"></div><span>服务器管理</span></li>
+			{% endif %}
+			{% if "openserver" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="33" id="d_33" class="appbtn" title="开服" url="/openServerManage" opening="0"><div><img alt="开服" title="开服" src="static/image/ui/update.png"></div><span>开服</span></li>
+			{% endif %}
+			{% if "closeserver" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="34" id="d_34" class="appbtn" title="关服" url="/shutdownmanage" opening="0"><div><img alt="关服" title="关服" src="static/image/ui/shutdown.png"></div><span>关服</span></li>
+			{% endif %}
+			{% if "gmcommand" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="35" id="d_35" class="appbtn" title="GM指令" url="/gmcommand" opening="0"><div><img alt="GM指令" title="GM指令" src="static/image/ui/gm.png"></div><span>GM指令</span></li>
+			{% endif %}
+			{% if "checkversion" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="36" id="d_36" class="appbtn" title="版本查看" url="/checkver" opening="0"><div><img alt="版本查看" title="版本查看" src="static/image/ui/check.png"></div><span>版本查看</span></li>
+			{% endif %}
+			{% if "sqlcommand" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="37" id="d_37" class="appbtn" title="SQL执行" url="/sqlcommand" opening="0"><div><img alt="SQL执行" title="SQL执行" src="static/image/ui/sql.jpg"></div><span>SQL执行</span></li>
+			{% endif %}
+			{% if "resetdate" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="38" id="d_38" class="appbtn" title="修改时间" url="/resetdate" opening="0"><div><img alt="修改时间" title="修改时间" src="static/image/ui/resetdate.jpg"></div><span>修改时间</span></li>
+			{% endif %}
+		</div>
+		{% endif %}
+		{% if "logs" in DataInfo['permissionList'] %}
+		<div id="desk-4" class="desktop-container"><div class="scrollbar scrollbar-x"></div><div class="scrollbar scrollbar-y"></div>
+			{% if "phplog" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="41" id="d_41" class="appbtn" title="PHP日志管理" url="/phplogManage" opening="0"><div><img alt="PHP日志管理" title="PHP日志管理" src="static/image/ui/Notepad.png"></div><span>PHP日志管理</span></li>
+			{% endif %}
+			{% if "javalog" in DataInfo['permissionList'] %}
+			<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="42" id="d_42" class="appbtn" title="JAVA日志管理" url="/javalogManage" opening="0"><div><img alt="JAVA日志管理" title="JAVA日志管理" src="static/image/ui/javalog.jpg"></div><span>JAVA日志管理</span></li>
+			{% endif %}
+		</div>
+		{% endif %}
+		{% if "system" in DataInfo['permissionList'] %}
+		<div id="desk-5" class="desktop-container"><div class="scrollbar scrollbar-x"></div><div class="scrollbar scrollbar-y"></div>
+				{% if "user" in DataInfo['permissionList'] %}
+				<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="1" id="d_1" class="appbtn" title="用户管理" url="/userManage" opening="0"><div><img alt="用户管理" title="用户管理" src="static/image/ui/user.png"></div><span>用户管理</span></li>
+				{% endif %}
+				{% if "permission" in DataInfo['permissionList'] %}
+				<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="2" id="d_2" class="appbtn" title="权限管理" url="/permissionManage" opening="0"><div><img alt="权限管理" title="权限管理" src="static/image/ui/permission.png"></div><span>权限管理</span></li>
+				{% endif %}
+				{% if "role" in DataInfo['permissionList'] %}
+				<li isresize="1" type="app" style="top:27px;left:36px" width="1366" height="768" appid="3" id="d_3" class="appbtn" title="角色管理" url="/roleManage" opening="0"><div><img alt="角色管理" title="角色管理" src="static/image/ui/role.png"></div><span>角色管理</span></li>
+				{% endif %}
+			
+		</div>
+		{% endif %}
+		<div id="dock-bar">
+			<div id="dock-container">
+				<div class="dock-middle">
+					<div class="dock-applist">
+						<div class="note">{{ DataInfo['username'] }}，欢迎使用运维管理平台</div>
+						<div class="note_x">如使用过程中有任何问题或建议请联系运维</div>
+						
+					</div>
+					<div class="dock-toollist">
+						<a href="javascript:;" class="dock-tool-setting" title='设置'></a>
+						<span href="javascript:;" class="dock-tool-logout" title="退出"></span>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="task-bar-bg1"></div>
+	<div id="task-bar-bg2"></div>
+	<div id="task-bar">
+		<div id="task-next"><a href="javascript:;" id="task-next-btn" hidefocus="true"></a></div>
+		<div id="task-content">
+			<div id="task-content-inner"></div>
+		</div>
+		<div id="task-pre"><a href="javascript:;" id="task-pre-btn" hidefocus="true"></a></div>
+	</div>
+	<div id="nav-bar">
+		<div class="nav-wrapper">
+			<div class="head">
+			</div>
+			<div class="middle" id="navContainer">
+					<div class="menu" index="1">常用工具</div>
+					<div class="menu" index="2">休闲娱乐</div>
+					{% if "ywtools" in DataInfo['permissionList'] %}
+					<div class="menu" index="3">运维工具</div>
+					{% endif %}
+					{% if "logs" in DataInfo['permissionList'] %}
+					<div class="menu" index="4">日志管理</div>
+					{% endif %}
+					{% if "system" in DataInfo['permissionList'] %}
+					<div class="menu" index="5">系统管理</div>
+					{% endif %}
+			</div>
+			<div class="hou">
+			<a class="indicator indicator-manage" href="javascript:;" title="全局视图"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 全局视图 -->
+<div id="appmanage">
+	<a class="amg_close" href="javascript:;"></a>
+	<div id="amg_dock_container"></div>
+	<div class="amg_line_x"></div>
+	<div id="amg_folder_container">
+		<div class="folderItem">
+			<div class="folder_bg">常用工具</div>
+			<div class="folderOuter">
+				<div class="folderInner"></div>
+				<div class="scrollBar"></div>
+			</div>
+			<div class="amg_line_y"></div>
+		</div>
+		<div class="folderItem">
+			<div class="folder_bg">休闲娱乐</div>
+			<div class="folderOuter">
+				<div class="folderInner"></div>
+				<div class="scrollBar"></div>
+			</div>
+			<div class="amg_line_y"></div>
+		</div>
+		{% if "ywtools" in DataInfo['permissionList'] %}
+		<div class="folderItem">
+			<div class="folder_bg">运维工具</div>
+			<div class="folderOuter">
+				<div class="folderInner"></div>
+				<div class="scrollBar"></div>
+			</div>
+			<div class="amg_line_y"></div>
+		</div>
+		{% endif %}
+		{% if "logs" in DataInfo['permissionList'] %}
+		<div class="folderItem">
+			<div class="folder_bg">日志管理</div>
+			<div class="folderOuter">
+				<div class="folderInner"></div>
+				<div class="scrollBar"></div>
+			</div>
+			<div class="amg_line_y"></div>
+		</div>
+		{% endif %}
+		{% if "system" in DataInfo['permissionList'] %}
+		<div class="folderItem">
+			<div class="folder_bg">系统管理</div>
+			<div class="folderOuter">
+				<div class="folderInner"></div>
+				<div class="scrollBar"></div>
+			</div>
+			<div class="amg_line_y"></div>
+		</div>
+		{% endif %}
+	</div>
+</div>
+<script src="static/js/jquery-1.8.3.min.js"></script>
+<script src="static/js/HoorayLibs/hooraylibs.js"></script>
+<script src="static/js/templates.js"></script>
+<script src="static/js/util.js"></script>
+<script src="static/js/core.js"></script>
+<script src="static/js/hros.app.js"></script>
+<script src="static/js/hros.appmanage.js"></script>
+<script src="static/js/hros.base.js"></script>
+<script src="static/js/hros.desktop.js"></script>
+<script src="static/js/hros.dock.js"></script>
+<script src="static/js/hros.folderView.js"></script>
+<script src="static/js/hros.grid.js"></script>
+<script src="static/js/hros.maskBox.js"></script>
+<script src="static/js/hros.navbar.js"></script>
+<script src="static/js/hros.popupMenu.js"></script>
+<script src="static/js/hros.taskbar.js"></script>
+<script src="static/js/hros.uploadFile.js"></script>
+<script src="static/js/hros.wallpaper.js"></script>
+<script src="static/js/hros.widget.js"></script>
+<script src="static/js/hros.window.js"></script>
+<script src="static/js/hros.zoom.js"></script>
+<script src="static/js/artDialog4.1.6/jquery.artDialog.js?skin=default"></script>
+<script src="static/js/artDialog4.1.6/plugins/iframeTools.js"></script>
+<script>
+function loading(){
+	$(".window-loading").fadeIn(200);
+}
+function loadingOut(){
+	$(".window-loading").fadeOut(200);
+}
+
+var width = $(window).width()/2;
+var width2 = width + 260;
+//新手帮助提示
+var help = template(
+	'<div id="help">'+
+		'<a href="javascript:;" class="close" title="关闭新手帮助">×</a>'+
+		'<div id="step1" class="step" step="1" style="position:relative;left:50%;top:50%;margin-left:-160px;margin-top:-60px;width:280px;height:100px">'+
+			'<p style="text-align:center">'+
+				'<span class="h2">欢迎使用墨龙公共平台</span>'+
+				'<br>下面我会简单介绍下如何使用，以便你快速上手<br>'+
+				'<a href="javascript:;" class="next">下一步</a>'+
+			'</p>'+
+		'</div>'+
+		'<div id="step2" class="step" step="2" style="left:'+width2+'px;width:250px">'+
+		'<b class="jt jt_left" style="left:-40px;top:20px"></b>'+
+		'<p>'+
+			'<span class="h1">①</span><span class="h2">系统设置</span>'+
+			'<br>可以修改密码，系统语言，退出系统等<br>'+
+			'<a href="javascript:;" class="next">下一步</a>'+
+		'</p>'+
+	'</div>'+
+		'<div id="step4" class="step" step="4" style="top:90px;left:140px;width:250px">'+
+			'<b class="jt jt_left" style="left:-40px;top:20px"></b>'+
+			'<p>'+
+				'<span class="h1">③</span><span class="h2">桌面</span>'+
+				'<br>上面有具体的功能模块，单击即可使用<br>'+
+				'<a href="javascript:;" class="next">下一步</a>'+
+			'</p>'+
+		'</div>'+
+		
+		'<div id="step3" class="step" step="3" style="top:130px;left:'+width+'px;width:250px">'+
+			'<b class="jt jt_top" style="top:-40px;left:30px"></b>'+
+			'<p>'+
+				'<span class="h1">②</span><span class="h2">翻页菜单</span>'+
+				'<br>可以快速切换到其对应的桌面，也可以切换到全局视图<br>'+
+				'<a href="javascript:;" class="next">下一步</a>'+
+			'</p>'+
+		'</div>'+
+		'<div id="step5" class="step" step="5" style="bottom:50px;left:550px;width:250px">'+
+			'<b class="jt jt_bottom" style="bottom:-40px;left:30px"></b>'+
+			'<p>'+
+				'<span class="h1">④</span><span class="h2">任务栏</span>'+
+				'<br>这个就不用我介绍了吧<br>'+
+				'<a href="javascript:;" class="over">&nbsp完成&nbsp;</a>'+
+			'</p>'+
+		'</div>'+
+	'</div>'
+);
+$(function(){
+	//IE下禁止选中
+	document.body.onselectstart = document.body.ondrag = function(){return false;}
+	
+	$('.loading').hide();
+	$('#desktop').show();
+	//初始化
+	HROS.base.init();
+	
+//	$.dialog({
+//		title: '欢迎使用 HoorayOS',
+//		icon: 'face-smile',
+//		width: 320,
+//		content: 'HoorayOS 是否就是你一直想要的 web 桌面么？<br>' + '那么我非常期待您能够热情的提供<font style="color:red"> 35 元</font>或者其他金额的捐赠鼓励，正如您支持其他开源项目一样。<br>' + '支付宝：<a href="https://me.alipay.com/hooray" style="color:#214FA3" target="_blank">https://me.alipay.com/hooray</a><div style="width:100%;height:0px;font-size:0;border-bottom:1px solid #ccc"></div>如果你对本框架感兴趣，欢迎加入讨论群：<br>213804727' + '<div style="width:100%;height:0px;font-size:0;border-bottom:1px solid #ccc"></div>' +
+//				'HoorayOS 仅供个人学习交流，未经授权禁止用于商业用途，版权归作者所有，未经作者同意，不得删除代码中作者信息。若需要商业使用，请联系 QQ：304327508 进行授权'
+//	});
+});
+
+</script>
+</body>
+</html>
