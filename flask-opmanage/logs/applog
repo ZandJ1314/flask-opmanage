@@ -1,188 +1,16 @@
-2019-03-01 11:13:04,531 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 59, in infoindex
-    username = request.get["name"]
-  File "/usr/lib/python2.6/site-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'Request' object has no attribute 'get'
-2019-03-01 11:14:25,564 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 59, in infoindex
-    username = request.args.get["name"]
-TypeError: 'instancemethod' object is unsubscriptable
-2019-03-01 11:14:26,769 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 59, in infoindex
-    username = request.args.get["name"]
-TypeError: 'instancemethod' object is unsubscriptable
-2019-03-01 11:14:27,265 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 59, in infoindex
-    username = request.args.get["name"]
-TypeError: 'instancemethod' object is unsubscriptable
-2019-03-01 11:14:27,564 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 59, in infoindex
-    username = request.args.get["name"]
-TypeError: 'instancemethod' object is unsubscriptable
-2019-03-01 11:14:27,856 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 59, in infoindex
-    username = request.args.get["name"]
-TypeError: 'instancemethod' object is unsubscriptable
-2019-03-01 11:16:48,520 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 62, in infoindex
-    strbyte = base64.b64decode(jessionid)
-NameError: global name 'base64' is not defined
-2019-03-01 11:16:49,633 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 62, in infoindex
-    strbyte = base64.b64decode(jessionid)
-NameError: global name 'base64' is not defined
-2019-03-01 11:16:50,188 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 62, in infoindex
-    strbyte = base64.b64decode(jessionid)
-NameError: global name 'base64' is not defined
-2019-03-01 11:23:19,633 level-ERROR    Exception on /phyServerManage [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/decorators.py", line 7, in decorated_function
-    if permission in session['permissons']:
-  File "/usr/lib/python2.6/site-packages/werkzeug/local.py", line 377, in <lambda>
-    __getitem__ = lambda x, i: x._get_current_object()[i]
-KeyError: 'permissons'
-2019-03-01 13:55:43,580 level-ERROR    Exception on /ding [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/main/views.py", line 67, in infoindex
-    session['permissons'] = permissionlist
-NameError: global name 'permissionlist' is not defined
-2019-03-01 14:11:38,766 level-ERROR    Exception on /phyServerManage [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/data/BxcqMloms/app/decorators.py", line 20, in decorated_view
-    if request.method in EXEMPT_METHODS:
-NameError: global name 'EXEMPT_METHODS' is not defined
-2019-03-01 14:19:02,721 level-ERROR    Exception on /phyServerManage [GET]
+2019-03-05 09:54:02,348 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2019-03-05 09:54:03,062 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2019-03-05 10:04:35,184 level-ERROR    heqiangxin is logging and permission is [u'openserver', u'servermanager', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root', u'checkversion']
+2019-03-05 10:04:35,446 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2019-03-05 11:36:21,148 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2019-03-05 11:36:21,388 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2019-03-05 15:19:49,762 level-ERROR    zhongtao is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2019-03-05 15:19:50,001 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2019-03-05 15:35:52,957 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2019-03-05 15:35:53,202 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2019-03-05 15:37:34,835 level-ERROR    luoguoling is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'javalog', u'phplog', u'logs', u'permission', u'role', u'user', u'system', u'root']
+2019-03-05 15:37:35,009 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2019-03-05 15:43:16,776 level-ERROR    Exception on /shutdownByServers [POST]
 Traceback (most recent call last):
   File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -195,20 +23,21 @@ Traceback (most recent call last):
   File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/data/BxcqMloms/app/decorators.py", line 19, in decorated_view
-    if request.method in EXEMPT_METHODS:
-NameError: global name 'EXEMPT_METHODS' is not defined
-2019-03-01 14:39:06,705 level-ERROR    Exception on /phyServerManage [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1615, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1630, in finalize_request
-    response = self.make_response(rv)
-  File "/usr/lib/python2.6/site-packages/flask/app.py", line 1725, in make_response
-    raise ValueError('View function did not return a response')
-ValueError: View function did not return a response
-2019-03-01 14:51:46,615 level-ERROR    Exception on /phyServerManage [GET]
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 9, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/shutdowngame/views.py", line 72, in shutdownByServers
+    checkResultJson = json.loads(checkResult)
+  File "/usr/lib/python2.6/site-packages/flask/json.py", line 146, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/lib64/python2.6/json/__init__.py", line 318, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib64/python2.6/json/decoder.py", line 319, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib64/python2.6/json/decoder.py", line 338, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2019-03-05 15:43:16,776 level-ERROR    Exception on /shutdownByServers [POST]
 Traceback (most recent call last):
   File "/usr/lib/python2.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -221,5 +50,1262 @@ Traceback (most recent call last):
   File "/usr/lib/python2.6/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/data/BxcqMloms/app/decorators.py", line 19, in decorated_view
-    return func(*aogs,**kwargs)
-NameError: global name 'aogs' is not defined
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/decorators.py", line 9, in decorated_function
+    return func(*args,**kwargs)
+  File "/data/BxcqMloms/app/shutdowngame/views.py", line 72, in shutdownByServers
+    checkResultJson = json.loads(checkResult)
+  File "/usr/lib/python2.6/site-packages/flask/json.py", line 146, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/lib64/python2.6/json/__init__.py", line 318, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib64/python2.6/json/decoder.py", line 319, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib64/python2.6/json/decoder.py", line 338, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2019-03-05 15:43:16,842 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 15:43:16,843 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 15:48:16,948 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 15:48:16,949 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 15:53:17,043 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 15:53:17,044 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 15:58:17,089 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 15:58:17,089 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:03:17,190 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:03:17,190 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:08:17,291 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:08:17,292 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:13:17,321 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:13:17,321 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:18:17,341 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:18:17,342 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:23:17,448 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:23:17,448 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:28:17,556 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:28:17,556 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:33:17,607 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:33:17,607 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:38:17,621 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:38:17,622 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:43:17,643 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:43:17,644 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:48:17,750 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:48:17,750 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:53:17,856 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:53:17,856 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 16:58:17,878 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 16:58:17,879 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:03:17,924 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:03:17,924 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:06:24,829 level-ERROR    huheng is logging and permission is [u'resetdate', u'sqlcommand', u'checkversion', u'gmcommand', u'closeserver', u'openserver', u'servermanager', u'displayresetversion', u'checkserverstat', u'bootgame', u'update_front', u'update_javascripts', u'update_java', u'ywupdate', u'ywtools', u'root']
+2019-03-05 17:06:25,059 level-ERROR    AllPlatMsg is [{'gameAlias': u'bxcq', 'platformId': 2, 'platformAlias': u'qq', 'gameId': 27, 'configId': 1, 'platformName': u'qq'}, {'gameAlias': u'bxcq', 'platformId': 14, 'platformAlias': u'tencent', 'gameId': 27, 'configId': 2, 'platformName': u'tencent'}, {'gameAlias': u'bxcq', 'platformId': 16, 'platformAlias': u'bengwan_rxsj', 'gameId': 27, 'configId': 4, 'platformName': u'bengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 18, 'platformAlias': u'6344_rxsj', 'gameId': 27, 'configId': 6, 'platformName': u'6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 19, 'platformAlias': u'mayi_rxsj', 'gameId': 27, 'configId': 7, 'platformName': u'mayi_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 21, 'platformAlias': u'new6344_rxsj', 'gameId': 27, 'configId': 9, 'platformName': u'new6344_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 27, 'platformAlias': u'uc699_rxsj', 'gameId': 27, 'configId': 27, 'platformName': u'uc699_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 34, 'platformAlias': u'9hou_rxsj', 'gameId': 27, 'configId': 34, 'platformName': u'9hou_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 35, 'platformAlias': u'nbengwan_rxsj', 'gameId': 27, 'configId': 35, 'platformName': u'nbengwan_rxsj'}, {'gameAlias': u'bxcq', 'platformId': 36, 'platformAlias': u'new9hou_rxsj', 'gameId': 27, 'configId': 36, 'platformName': u'new9hou_rxsj'}]
+2019-03-05 17:08:18,002 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:08:18,003 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:13:18,026 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:13:18,027 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:18:18,127 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:18:18,128 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:23:18,234 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:23:18,234 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:28:18,266 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:28:18,267 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:29:54,883 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:29:54,884 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:33:18,293 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:33:18,293 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:34:54,939 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:34:54,939 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:38:18,344 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:38:18,344 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:39:54,979 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:39:54,979 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:43:18,434 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:43:18,434 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:44:55,000 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:44:55,001 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:48:18,442 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:48:18,443 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:49:55,107 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:49:55,107 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:53:18,494 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:53:18,494 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:54:55,190 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:54:55,190 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:58:18,601 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:58:18,601 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 17:59:55,297 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 17:59:55,297 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:03:18,708 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:03:18,708 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:04:55,341 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:04:55,341 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:08:18,742 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:08:18,743 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:09:55,447 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:09:55,448 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:13:18,793 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:13:18,794 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:14:55,542 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:14:55,542 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:18:18,852 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:18:18,852 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:19:55,621 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:19:55,622 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:23:18,894 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:23:18,894 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:24:55,642 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:24:55,643 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:28:18,944 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:28:18,945 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:29:55,694 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:29:55,694 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:33:19,044 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:33:19,044 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:34:55,801 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:34:55,802 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:38:19,093 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:38:19,094 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:39:55,842 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:39:55,843 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:43:19,199 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:43:19,200 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:44:55,893 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:44:55,894 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:48:19,287 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:48:19,288 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:49:55,944 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:49:55,944 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:53:19,391 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:53:19,392 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:54:55,993 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:54:55,994 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:58:19,442 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:58:19,442 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 18:59:56,043 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 18:59:56,044 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:03:19,548 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:03:19,548 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:04:56,149 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:04:56,149 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:08:19,654 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:08:19,655 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:09:56,255 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:09:56,256 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:13:19,673 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:13:19,674 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:14:56,353 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:14:56,353 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:18:19,693 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:18:19,693 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:19:56,392 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:19:56,393 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:23:19,743 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:23:19,743 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:24:56,497 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:24:56,497 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:28:19,793 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:28:19,793 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:29:56,553 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:29:56,553 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:33:19,893 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:33:19,894 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:34:56,659 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:34:56,660 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:38:19,994 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:38:19,994 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:39:56,766 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:39:56,767 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:43:20,040 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:43:20,041 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:44:56,838 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:44:56,838 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:48:20,147 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:48:20,147 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:49:56,944 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:49:56,945 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:53:20,242 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:53:20,242 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:54:57,050 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:54:57,050 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:58:20,291 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:58:20,291 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 19:59:57,149 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 19:59:57,149 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:03:20,337 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:03:20,338 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:04:57,198 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:04:57,199 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:08:20,442 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:08:20,443 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:09:57,295 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:09:57,296 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:13:20,486 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:13:20,487 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:14:57,394 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:14:57,394 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:18:20,594 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:18:20,595 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:19:57,500 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:19:57,500 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:23:20,635 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:23:20,635 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:24:57,596 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:24:57,597 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:28:20,681 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:28:20,682 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:29:57,647 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:29:57,648 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:33:20,780 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:33:20,780 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:34:57,754 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:34:57,754 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:38:20,794 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:38:20,794 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:39:57,846 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:39:57,846 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:43:20,901 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:43:20,901 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:44:57,896 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:44:57,896 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:48:20,944 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:48:20,944 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:49:57,934 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:49:57,935 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:53:21,050 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:53:21,050 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:54:58,040 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:54:58,041 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:58:21,156 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:58:21,156 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 20:59:58,147 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 20:59:58,148 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 21:03:21,262 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 21:03:21,263 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 21:04:58,161 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 21:04:58,162 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 21:08:21,293 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 21:08:21,293 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 21:09:58,243 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 21:09:58,244 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 21:13:21,376 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 21:13:21,377 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
+2019-03-05 21:14:58,350 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/mylibs/sendsocket.py", line 10, in send_socket
+    SendSocket.connect(addr)
+  File "<string>", line 1, in connect
+error: [Errno 111] Connection refused
+
+2019-03-05 21:14:58,351 level-ERROR    Traceback (most recent call last):
+  File "/data/BxcqMloms/app/api/views.py", line 122, in CollectLoad
+    loads = ipsLoadJson[i]['load']
+KeyError: 0
+
